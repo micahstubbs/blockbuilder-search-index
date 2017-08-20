@@ -19,7 +19,7 @@ const parseBlockURL = function(url) {
   const parts2 = parts[1].split('/');
   if (parts2.length === 1) {
     return;
-  }
+  
   const username = parts2[0];
   if (parseInt(username).toString() === username) {
     return;
