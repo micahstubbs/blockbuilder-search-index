@@ -9,4 +9,4 @@ coffee gist-cloner.coffee data/new-user-gists.json
 # generate a series of JSON files 
 # that pull out interesting metadata 
 # from the downloaded gists
-coffee parse.coffee 
+coffee parse.coffee
