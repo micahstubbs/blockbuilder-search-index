@@ -11,6 +11,7 @@ const pruneColorsMin = require('./prune-colors-min.js')
 const pruneFiles = require('./prune-files.js')
 const parseApi = require('./parse-api.js')
 const colorScales = require('./color-scales.js')
+const addColors = require('./add-colors.js')
 
 const allBlocks = []
 
@@ -107,23 +108,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const addColors = function(code, re, gcolorHash) {
-  const matches = code.match(re) || []
-  matches.forEach(function(str) {
-    const color = d3
-      .rgb(str)
-      .toString()
-      .toLowerCase()
-    //colorHash[color] = 0 unless colorHash[color]
-    //colorHash[color]++
-    if (!gcolorHash[color]) {
-      gcolorHash[color] = 0
-    }
-    return gcolorHash[color]++
-  })
-  return 0
-}
 
 const parseColors = function(code, gist, gcolorHash) {
   const hsl = /hsla?\(\s*(\d{1,3})\s*,\s*(\d{1,3}\%)\s*,\s*(\d{1,3}\%)\s*(?:\s*,\s*(\d+(?:\.\d+)?)\s*)?\)/g
