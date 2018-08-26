@@ -1,6 +1,4 @@
-const pruneFiles = function(gist) {
-  const fileNames = Object.keys(gist.files)
-  console.log('fileNames from pruneFiles', fileNames)
+const pruneFiles = function({ gist, fileNames }) {
   const prunes = []
   fileNames.forEach(function(fileName) {
     const file = gist.files[fileName]
