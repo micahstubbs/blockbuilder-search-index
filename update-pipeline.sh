@@ -187,18 +187,14 @@ coffee gist-cloner.coffee data/latest-20180819-to-20180824.json
 # indexed
 
 coffee parse.coffee
-# 29419 'a488e022362571a9e1187985df7f47a4'
-# 29420 '8d331f9b5c7dd57908de0db3439ab7ab'
-# 29421 'd1dbded3fe2c8cb94b207904c7c4c73d'
-# 29422 '5b7d24613149e60867c2bf6fe097c587'
-# 29423 '492182b66a0d1a3dd5513ff5b71c900c'
-# 29424 '056046c1f83e3926484bd2e21847341e'
+# 37320 '0df732160f5eff68c6c683ef3a18f76e'
+# 37321 'a6f6f4a4588b390ba866710e55c77c20'
 # done
 # skipped 0 missing files
 # wrote 10445 API blocks
 # wrote 11522 Color blocks
-# wrote 117533 Files blocks
-# wrote 29424 total blocks
+# wrote 149198 Files blocks
+# wrote 37321 total blocks
 
 cd data/parsed
 pwd
