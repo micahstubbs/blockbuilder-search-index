@@ -12,9 +12,9 @@ const pruneFiles = require('./prune-files.js')
 const parseApi = require('./parse-api.js')
 const colorScales = require('./color-scales.js')
 const parseColors = require('./parse-colors.js')
-const parseScriptTags = require('./parse-script-tags.js')
 const parseLibs = require('./parse-libs.js')
 const parseD3Version = require('./parse-d3-version.js')
+const parseD3Modules = require('./parse-d3-modules.js')
 
 const allBlocks = []
 
@@ -107,32 +107,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const parseD3Modules = function(code, gmoduleHash) {
-  // finds anything with the pattern d3-*. e.g. d3-legend.js or d3-transition.v1.min.js
-  // TODO:
-  // d3.geo.projection/raster/tile/polyhedron
-  // d3.tip
-  const scripts = parseScriptTags(code)
-  scripts.forEach(function(script) {
-    const re = /(d3-[a-z]*?)\./
-    //module = script.match(re)
-    const matches = re.exec(script)
-    if (!matches || !matches.length) {
-      return
-    }
-    const module = matches[1]
-    //console.log module
-    //console.log script
-    //moduleHash[module] = 0 unless moduleHash[module]
-    //moduleHash[module]++
-    if (!gmoduleHash[module]) {
-      gmoduleHash[module] = 0
-    }
-    return gmoduleHash[module]++
-  })
-  return 0
-}
 
 let i = 0
 const gistParser = function(gist, gistCb) {
