@@ -15,6 +15,7 @@ const done = function(parentProps, err) {
     moduleHash
   } = parentProps
   console.log('done') //, apiHash
+  console.log('moduleHash from done', moduleHash)
   console.log(`skipped ${missing} missing files`)
   fs.writeFileSync(
     __dirname + '/../data/parsed/apis.json',

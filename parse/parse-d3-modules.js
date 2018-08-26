@@ -1,6 +1,6 @@
 const parseScriptTags = require('./parse-script-tags.js')
 
-const parseD3Modules = function(code, gistModuleHash) {
+const parseD3Modules = function({ code, moduleHash, gistModuleHash }) {
   // console.log('code from parse-d3-modules', code)
 
   // finds anything with the pattern d3-*. e.g. d3-legend.js or d3-transition.v1.min.js
@@ -19,9 +19,12 @@ const parseD3Modules = function(code, gistModuleHash) {
     }
     const module = matches[1]
     console.log('module found', module)
-    //console.log script
-    //moduleHash[module] = 0 unless moduleHash[module]
-    //moduleHash[module]++
+
+    if (!moduleHash[module]) {
+      moduleHash[module] = 0
+    }
+    moduleHash[module]++
+
     if (!gistModuleHash[module]) {
       gistModuleHash[module] = 0
     }

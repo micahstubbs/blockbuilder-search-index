@@ -21,7 +21,8 @@ const gistParser = function(parentProps, gist, gistCb) {
     minBlocks,
     colorBlocks,
     colorBlocksMin,
-    apiBlocks
+    apiBlocks,
+    moduleHash
   } = parentProps
   //console.log "NOT RETURNING", gist.id, singleId
   // i++
@@ -75,7 +76,11 @@ const gistParser = function(parentProps, gist, gistCb) {
             // TODO copy glibHash -> libHash etc for each of these
             const numLibs = parseLibs(contents, gist, glibHash)
             const version = parseD3Version(contents)
-            const modules = parseD3Modules(contents, gistModuleHash)
+            const modules = parseD3Modules({
+              code: contents,
+              moduleHash,
+              gistModuleHash
+            })
             console.log('fileName is index.html')
             console.log('numLibs', numLibs)
             console.log('version', version)
