@@ -11,7 +11,7 @@ const pruneColorsMin = require('./prune-colors-min.js')
 const pruneFiles = require('./prune-files.js')
 const parseApi = require('./parse-api.js')
 const colorScales = require('./color-scales.js')
-const addColors = require('./add-colors.js')
+const parseColors = require('./parse-colors.js')
 
 const allBlocks = []
 
@@ -38,10 +38,6 @@ const moduleHash = {}
 
 // number of missing files
 const missing = 0
-
-const colorNames = d3.csv.parse(
-  fs.readFileSync(__dirname + '/../data/colors.csv').toString()
-)
 
 const done = function(err) {
   console.log('done') //, apiHash
@@ -108,24 +104,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const parseColors = function(code, gist, gcolorHash) {
-  const hsl = /hsla?\(\s*(\d{1,3})\s*,\s*(\d{1,3}\%)\s*,\s*(\d{1,3}\%)\s*(?:\s*,\s*(\d+(?:\.\d+)?)\s*)?\)/g
-  const hex = /#[a-fA-F0-9]{3,6}/g
-  //someone clever could combine these two
-  const rgb = /rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)/g
-  const rgba = /rgba\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)/g
-  addColors(code, hsl, gcolorHash)
-  addColors(code, hex, gcolorHash)
-  addColors(code, rgb, gcolorHash)
-  addColors(code, rgba, gcolorHash)
-  colorNames.forEach(function(c) {
-    const re = new RegExp(c.color, 'gi')
-    return addColors(code, re, gcolorHash)
-  })
-
-  return Object.keys(gcolorHash).length
-}
 
 const parseScriptTags = function(code) {
   // anything with a // in it (signifiying url...)
