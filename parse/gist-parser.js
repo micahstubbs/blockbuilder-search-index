@@ -48,6 +48,7 @@ const gistParser = function(parentProps, gist, gistCb) {
     fileNames,
     function(fileName, fileCb) {
       const ext = path.extname(fileName)
+      console.log('ext', ext)
       if (
         [
           '.html',
@@ -67,11 +68,16 @@ const gistParser = function(parentProps, gist, gistCb) {
             return fileCb()
           }
           const contents = data.toString()
+          // console.log('contents from gistParser readFile', contents)
           if (fileName === 'index.html') {
             // TODO copy glibHash -> libHash etc for each of these
             const numLibs = parseLibs(contents, gist, glibHash)
             const version = parseD3Version(contents)
             const modules = parseD3Modules(contents, gmoduleHash)
+            console.log('fileName is index.html')
+            console.log('numLibs', numLibs)
+            console.log('version', version)
+            console.log('modules', modules)
             gist.d3version = version
           }
           if (['.html', '.js', '.coffee'].includes(ext)) {
