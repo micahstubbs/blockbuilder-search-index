@@ -58,7 +58,7 @@ const done = function(parentProps, err) {
 
   let modulescsv = 'module,count\n'
   Object.keys(moduleHash)
-    .sort((a, b) => b.count - a.count)
+    .sort((a, b) => moduleHash[b] - moduleHash[a])
     .forEach(module => (modulescsv += module + ',' + moduleHash[module] + '\n'))
   fs.writeFileSync(__dirname + '/../data/parsed/modules.csv', modulescsv)
 
