@@ -8,6 +8,7 @@ const pruneMin = require('./prune-min.js')
 const pruneApi = require('./prune-api.js')
 const pruneColors = require('./prune-colors.js')
 const pruneColorsMin = require('./prune-colors-min.js')
+const pruneFiles = require('./prune-files.js')
 
 const categoryColors = require('./category-colors.json')
 
@@ -108,25 +109,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const pruneFiles = function(gist) {
-  const fileNames = Object.keys(gist.files)
-  const prunes = []
-  fileNames.forEach(function(fileName) {
-    const file = gist.files[fileName]
-    const pruned = {
-      gistId: gist.id,
-      userId: gist.userId,
-      description: gist.description,
-      created_at: gist.created_at,
-      updated_at: gist.updated_at,
-      fileName,
-      file
-    }
-    return prunes.push(pruned)
-  })
-  return prunes
-}
 
 const parseD3Functions = function(code) {
   // we match d3.foo.bar( which will find plugins and unofficial api functions
