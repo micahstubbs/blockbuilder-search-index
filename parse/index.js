@@ -9,7 +9,7 @@ const pruneApi = require('./prune-api.js')
 const pruneColors = require('./prune-colors.js')
 const pruneColorsMin = require('./prune-colors-min.js')
 const pruneFiles = require('./prune-files.js')
-const parseD3Functions = require('./parse-d3-functions.js')
+const parseApi = require('./parse-api.js')
 
 const categoryColors = require('./category-colors.json')
 
@@ -110,20 +110,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const parseApi = function(code, gist, gapiHash) {
-  const apis = parseD3Functions(code)
-  apis.forEach(function(api) {
-    api = api.slice(0, api.length - 1)
-    //apiHash[api] = 0 unless apiHash[api]
-    //apiHash[api]++
-    if (!gapiHash[api]) {
-      gapiHash[api] = 0
-    }
-    return gapiHash[api]++
-  })
-  return apis.length
-}
 
 const colorScales = function(gapiHash, gcolorHash) {
   categories.forEach(function(cat) {
