@@ -13,6 +13,7 @@ const parseApi = require('./parse-api.js')
 const colorScales = require('./color-scales.js')
 const parseColors = require('./parse-colors.js')
 const parseScriptTags = require('./parse-script-tags.js')
+const parseLibs = require('./parse-libs.js')
 
 const allBlocks = []
 
@@ -105,15 +106,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const parseLibs = function(code, gist, glibHash) {
-  const scripts = parseScriptTags(code)
-  scripts.forEach(function(script) {})
-  //console.log script
-  //libHash[script] = 0 unless libHash[script]
-  //libHash[script]++
-  return 0
-}
 
 const parseD3Version = function(code) {
   const scripts = parseScriptTags(code)
