@@ -12,6 +12,7 @@ const pruneFiles = require('./prune-files.js')
 const parseApi = require('./parse-api.js')
 const colorScales = require('./color-scales.js')
 const parseColors = require('./parse-colors.js')
+const parseScriptTags = require('./parse-script-tags.js')
 
 const allBlocks = []
 
@@ -104,20 +105,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const parseScriptTags = function(code) {
-  // anything with a // in it (signifiying url...)
-  //re = new RegExp /<script.*?src=[\"\'](.*?\/\/.+?)[\"\'].*?>/g
-  // anything with a .js in it
-  const re = new RegExp(/<script.*?src=[\"\'](.*?\.js.*?)[\"\'].*?>/g)
-  const matches = []
-  let match = re.exec(code)
-  while (match !== null) {
-    matches.push(match[1])
-    match = re.exec(code)
-  }
-  return matches
-}
 
 const parseLibs = function(code, gist, glibHash) {
   const scripts = parseScriptTags(code)
