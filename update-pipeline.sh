@@ -186,6 +186,52 @@ coffee gist-cloner.coffee data/latest-20180819-to-20180824.json
 #
 # indexed
 
+coffee gist-cloner.coffee data/new.json 
+# 5cd3c864f7249642998fd03fb8271890 zzhang115 0 Cloning into '5cd3c864f7249642998fd03fb8271890'...
+#
+# 6c8ccda822c620731d0225599b7e3e12 zzhang115 0 Cloning into '6c8ccda822c620731d0225599b7e3e12'...
+#
+# done writing files
+# Elasticsearch DEBUG: 2018-08-26T08:26:33Z
+#   starting request { method: 'POST',
+#     path: '/bbindexer/scripts',
+#     body:
+#      { script: 'content',
+#        timeouts: [],
+#        filename: 'data/new.json',
+#        ranAt: 2018-08-26T08:26:33.281Z },
+#     query: {} }
+#
+#
+# Elasticsearch TRACE: 2018-08-26T08:26:33Z
+#   -> POST http://localhost:9200/bbindexer/scripts
+#   {
+#     "script": "content",
+#     "timeouts": [],
+#     "filename": "data/new.json",
+#     "ranAt": "2018-08-26T08:26:33.281Z"
+#   }
+#   <- 201
+#   {
+#     "_index": "bbindexer",
+#     "_type": "scripts",
+#     "_id": "FqZXdWUBizCTN0xZf53X",
+#     "_version": 1,
+#     "result": "created",
+#     "_shards": {
+#       "total": 2,
+#       "successful": 1,
+#       "failed": 0
+#     },
+#     "_seq_no": 0,
+#     "_primary_term": 1
+#   }
+#
+# Elasticsearch DEBUG: 2018-08-26T08:26:33Z
+#   Request complete
+#
+# indexed
+
 coffee parse.coffee
 # 37320 '0df732160f5eff68c6c683ef3a18f76e'
 # 37321 'a6f6f4a4588b390ba866710e55c77c20'
