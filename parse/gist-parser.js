@@ -36,7 +36,10 @@ const gistParser = function(parentProps, gist, gistCb) {
   fs.mkdir(folder, function() {})
 
   // we make a simplified data object for each file
+  console.log('gist', gist)
   const filepruned = pruneFiles(gist)
+  console.log('filepruned', filepruned)
+
   fileBlocks = fileBlocks.concat(filepruned)
 
   return async.each(

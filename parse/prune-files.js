@@ -1,11 +1,13 @@
 const pruneFiles = function(gist) {
   const fileNames = Object.keys(gist.files)
+  console.log('fileNames from pruneFiles', fileNames)
   const prunes = []
   fileNames.forEach(function(fileName) {
     const file = gist.files[fileName]
+    const user = gist.userId || gist.owner.login
     const pruned = {
       gistId: gist.id,
-      userId: gist.userId,
+      userId: user,
       description: gist.description,
       created_at: gist.created_at,
       updated_at: gist.updated_at,
