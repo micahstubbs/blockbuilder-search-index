@@ -14,6 +14,7 @@ const colorScales = require('./color-scales.js')
 const parseColors = require('./parse-colors.js')
 const parseScriptTags = require('./parse-script-tags.js')
 const parseLibs = require('./parse-libs.js')
+const parseD3Version = require('./parse-d3-version.js')
 
 const allBlocks = []
 
@@ -106,31 +107,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const parseD3Version = function(code) {
-  const scripts = parseScriptTags(code)
-  let version = 'NA'
-  scripts.forEach(function(script) {
-    if (script.indexOf('d3.v4') >= 0) {
-      version = 'v4'
-    } else if (script.indexOf('d3/3.') >= 0 || script.indexOf('d3.v3') >= 0) {
-      version = 'v3'
-    }
-    if (script.indexOf('d3.v2') >= 0) {
-      return (version = 'v2')
-    } else if (
-      script.indexOf('d3.js') >= 0 ||
-      script.indexOf('d3.min.js') >= 0
-    ) {
-      // we know this is some sort of d3 but not which version
-      if (version === 'NA') {
-        return (version = 'IDK')
-      }
-    }
-  })
-  //console.log version
-  return version
-}
 
 const parseD3Modules = function(code, gmoduleHash) {
   // finds anything with the pattern d3-*. e.g. d3-legend.js or d3-transition.v1.min.js
