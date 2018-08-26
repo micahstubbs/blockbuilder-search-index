@@ -30,7 +30,7 @@ const gistParser = function(parentProps, gist, gistCb) {
   // per-gist cache of api functions that we build up in place
   const gapiHash = {}
   const glibHash = {}
-  const gmoduleHash = {}
+  const gistModuleHash = {}
   const gcolorHash = {}
   const folder = __dirname + '/' + '../data/gists-files/' + gist.id
   fs.mkdir(folder, function() {})
@@ -75,7 +75,7 @@ const gistParser = function(parentProps, gist, gistCb) {
             // TODO copy glibHash -> libHash etc for each of these
             const numLibs = parseLibs(contents, gist, glibHash)
             const version = parseD3Version(contents)
-            const modules = parseD3Modules(contents, gmoduleHash)
+            const modules = parseD3Modules(contents, gistModuleHash)
             console.log('fileName is index.html')
             console.log('numLibs', numLibs)
             console.log('version', version)
@@ -110,8 +110,8 @@ const gistParser = function(parentProps, gist, gistCb) {
         gist.api = gapiHash
         apiBlocks.push(pruneApi(gist))
       }
-      if (Object.keys(gmoduleHash).length > 0) {
-        gist.d3modules = gmoduleHash
+      if (Object.keys(gistModuleHash).length > 0) {
+        gist.d3modules = gistModuleHash
       }
       if (Object.keys(gcolorHash).length > 0) {
         gist.colors = gcolorHash

@@ -274,7 +274,7 @@ parseD3Version = (code) ->
   return version
 
 
-parseD3Modules = (code, gmoduleHash) ->
+parseD3Modules = (code, gistModuleHash) ->
   # finds anything with the pattern d3-*. e.g. d3-legend.js or d3-transition.v1.min.js
   # TODO:
   # d3.geo.projection/raster/tile/polyhedron
@@ -290,8 +290,8 @@ parseD3Modules = (code, gmoduleHash) ->
     #console.log script
     #moduleHash[module] = 0 unless moduleHash[module]
     #moduleHash[module]++
-    gmoduleHash[module] = 0 unless gmoduleHash[module]
-    gmoduleHash[module]++
+    gistModuleHash[module] = 0 unless gistModuleHash[module]
+    gistModuleHash[module]++
   return 0
 
 
@@ -304,7 +304,7 @@ gistParser = (gist, gistCb) ->
   # per-gist cache of api functions that we build up in place
   gapiHash = {}
   glibHash = {}
-  gmoduleHash = {}
+  gistModuleHash = {}
   gcolorHash = {}
   folder = __dirname + "/" + "data/gists-files/" + gist.id
   fs.mkdir folder, ->
@@ -324,7 +324,7 @@ gistParser = (gist, gistCb) ->
           # TODO copy glibHash -> libHash etc for each of these
           numLibs = parseLibs contents, gist, glibHash
           version = parseD3Version contents
-          modules = parseD3Modules contents, gmoduleHash
+          modules = parseD3Modules contents, gistModuleHash
           gist.d3version = version
         if ext in [".html", ".js", ".coffee"]
           # TODO copy gapiHash -> apiHash etc for each of these
@@ -349,8 +349,8 @@ gistParser = (gist, gistCb) ->
     if Object.keys(gapiHash).length > 0
       gist.api = gapiHash
       apiBlocks.push pruneApi(gist)
-    if Object.keys(gmoduleHash).length > 0
-      gist.d3modules = gmoduleHash
+    if Object.keys(gistModuleHash).length > 0
+      gist.d3modules = gistModuleHash
     if Object.keys(gcolorHash).length > 0
       gist.colors = gcolorHash
       colorBlocks.push pruneColors(gist)

@@ -68,7 +68,8 @@ if (require.main === module) {
       minBlocks,
       colorBlocks,
       colorBlocksMin,
-      apiBlocks
+      apiBlocks,
+      moduleHash
     }),
     done.bind(null, {
       missing,
