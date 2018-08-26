@@ -33,19 +33,61 @@ coffee combine-users.coffee
 # if yes, run this command. if no, do nothing
 #  
 coffee gist-meta.coffee data/new.json '' 'new-users'
-# combining 3147 with 25277 existing blocks
-# writing 28336 blocks to data/gist-meta.json
-# writing 3147 to data/new.json
+# done with zischwartz, found 13 gists
+# x-ratelimit-remaining: 1793
+# x-ratelimit-remaining: 1792
+# done with zzhang115, found 21 gists
+#
+# done. number of new gists: 7911
+# combining 7911 with 29424 existing blocks
+# writing 37303 blocks to data/gist-meta.json
+# writing 7911 to data/new.json
+#
+# Elasticsearch DEBUG: 2018-08-26T00:18:45Z
+#   starting request { method: 'POST',
+#     path: '/bbindexer/scripts',
+#     body:
+#      { script: 'meta',
+#        numBlocks: 7911,
+#        filename: 'data/new.json',
+#        since: 1970-01-01T00:00:00.000Z,
+#        ranAt: 2018-08-26T00:18:45.212Z },
+#     query: {} }
+
+
+# Elasticsearch TRACE: 2018-08-26T00:18:45Z
+#   -> POST http://localhost:9200/bbindexer/scripts
+#   {
+#     "script": "meta",
+#     "numBlocks": 7911,
+#     "filename": "data/new.json",
+#     "since": "1970-01-01T00:00:00.000Z",
+#     "ranAt": "2018-08-26T00:18:45.212Z"
+#   }
+#   <- 201
+#   {
+#     "_index": "bbindexer",
+#     "_type": "scripts",
+#     "_id": "E6aYc2UBizCTN0xZ553R",
+#     "_version": 1,
+#     "result": "created",
+#     "_shards": {
+#       "total": 2,
+#       "successful": 1,
+#       "failed": 0
+#     },
+#     "_seq_no": 0,
+#     "_primary_term": 1
+#   }
+
+# Elasticsearch DEBUG: 2018-08-26T00:18:45Z
+#   Request complete
+
+# indexed
 
 #
 # fetch the metadata for all new gists
 # for all known users from the github API
-#
-#
-# TODO: inside gist-meta script handle case were github 
-# API allocaton runs out before metadata is fetched for all users
-# fixing this is required to run the whole pipeline in sequence, 
-# in autonomous mode
 #
 coffee gist-meta.coffee data/latest-20180819-to-20180824.json $UPDATE_AFTER_TIMESTAMP
 # x-ratelimit-remaining: 4652
