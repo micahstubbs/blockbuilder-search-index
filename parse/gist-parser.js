@@ -25,8 +25,7 @@ const gistParser = function(parentProps, gist, gistCb) {
     moduleHash
   } = parentProps
   //console.log "NOT RETURNING", gist.id, singleId
-  // i++
-  // console.log(i, gist.id)
+  console.log('gist.id', gist.id)
   const fileNames = Object.keys(gist.files || {})
   // per-gist cache of api functions that we build up in place
   const gapiHash = {}
