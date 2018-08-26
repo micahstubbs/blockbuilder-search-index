@@ -6,6 +6,7 @@ const path = require('path')
 
 const pruneMin = require('./prune-min.js')
 const pruneApi = require('./prune-api.js')
+const pruneColors = require('./prune-colors.js')
 
 const categoryColors = require('./category-colors.json')
 
@@ -106,22 +107,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const pruneColors = function(gist) {
-  const pruned = {
-    id: gist.id,
-    userId: gist.owner.login,
-    //userId: gist.userId
-    description: gist.description,
-    created_at: gist.created_at,
-    updated_at: gist.updated_at,
-    colors: gist.colors
-  }
-  if (gist.files['thumbnail.png']) {
-    pruned.thumbnail = gist.files['thumbnail.png'].raw_url
-  }
-  return pruned
-}
 
 const pruneColorsMin = function(gist) {
   const pruned = {
