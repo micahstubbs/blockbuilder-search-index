@@ -15,7 +15,7 @@ const done = function(parentProps, err) {
     moduleHash
   } = parentProps
   console.log('done') //, apiHash
-  console.log('moduleHash from done', moduleHash)
+  // console.log('moduleHash from done', moduleHash)
   console.log(`skipped ${missing} missing files`)
   fs.writeFileSync(
     __dirname + '/../data/parsed/apis.json',
@@ -57,9 +57,9 @@ const done = function(parentProps, err) {
   fs.writeFileSync(__dirname + '/../data/parsed/libs.csv', libcsv)
 
   let modulescsv = 'module,count\n'
-  Object.keys(moduleHash).forEach(
-    module => (modulescsv += module + ',' + moduleHash[module] + '\n')
-  )
+  Object.keys(moduleHash)
+    .sort((a, b) => b.count - a.count)
+    .forEach(module => (modulescsv += module + ',' + moduleHash[module] + '\n'))
   fs.writeFileSync(__dirname + '/../data/parsed/modules.csv', modulescsv)
 
   if (err) {

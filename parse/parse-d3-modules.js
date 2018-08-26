@@ -8,17 +8,17 @@ const parseD3Modules = function({ code, moduleHash, gistModuleHash }) {
   // d3.geo.projection/raster/tile/polyhedron
   // d3.tip
   const scripts = parseScriptTags(code)
-  console.log('scripts from parse-d3-modules', scripts)
+  // console.log('scripts from parse-d3-modules', scripts)
   scripts.forEach(function(script) {
     const re = /(d3-[\w-]*)(?=\.)/
     //module = script.match(re)
     const matches = re.exec(script)
-    console.log('matches', matches)
+    // console.log('matches', matches)
     if (!matches || !matches.length) {
       return
     }
     const module = matches[1]
-    console.log('module found', module)
+    // console.log('module found', module)
 
     if (!moduleHash[module]) {
       moduleHash[module] = 0
@@ -28,7 +28,7 @@ const parseD3Modules = function({ code, moduleHash, gistModuleHash }) {
     if (!gistModuleHash[module]) {
       gistModuleHash[module] = 0
     }
-    console.log('gistModuleHash from parse-d3-modules', gistModuleHash)
+    // console.log('gistModuleHash from parse-d3-modules', gistModuleHash)
     return gistModuleHash[module]++
   })
   const modules = Object.keys(gistModuleHash)
