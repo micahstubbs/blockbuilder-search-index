@@ -9,6 +9,7 @@ const pruneApi = require('./prune-api.js')
 const pruneColors = require('./prune-colors.js')
 const pruneColorsMin = require('./prune-colors-min.js')
 const pruneFiles = require('./prune-files.js')
+const parseD3Functions = require('./parse-d3-functions.js')
 
 const categoryColors = require('./category-colors.json')
 
@@ -109,13 +110,6 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 gistMeta = gistMeta.slice(0, 101)
 console.log(gistMeta.length)
-
-const parseD3Functions = function(code) {
-  // we match d3.foo.bar( which will find plugins and unofficial api functions
-  const re = new RegExp(/d3\.[a-zA-Z0-9\.]*?\(/g)
-  const matches = code.match(re) || []
-  return matches
-}
 
 const parseApi = function(code, gist, gapiHash) {
   const apis = parseD3Functions(code)
