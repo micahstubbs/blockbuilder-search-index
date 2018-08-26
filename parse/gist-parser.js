@@ -49,7 +49,7 @@ const gistParser = function(parentProps, gist, gistCb) {
     fileNames,
     function(fileName, fileCb) {
       const ext = path.extname(fileName)
-      console.log('ext', ext)
+      // console.log('ext', ext)
       if (
         [
           '.html',
