@@ -90,56 +90,55 @@ coffee gist-meta.coffee data/new.json '' 'new-users'
 # for all known users from the github API
 #
 coffee gist-meta.coffee data/latest-20180819-to-20180824.json $UPDATE_AFTER_TIMESTAMP
-# x-ratelimit-remaining: 4652
-# done with yonester, found 5 gists
-# x-ratelimit-remaining: 4651
-# x-ratelimit-remaining: undefined
-# done with yifancui, found 34 gists
-# x-ratelimit-remaining: undefined
-# ...
+# done with zwakhall, found 0 gists
+# x-ratelimit-remaining: 0
 # done with zzolo, found 0 gists
-# done. number of new gists: 1965
-# combining 1965 with 29327 existing blocks
-# writing 29424 blocks to data/gist-meta.json
-# writing 1965 to data/latest-after-20180314.json
-# Elasticsearch DEBUG: 2018-08-21T12:58:48Z
+#
+# done. number of new gists: 57
+# combining 57 with 37303 existing blocks
+# writing 37321 blocks to data/gist-meta.json
+# writing 57 to data/latest-20180819-to-20180824.json
+#
+# Elasticsearch DEBUG: 2018-08-26T00:25:16Z
 #   starting request { method: 'POST',
 #     path: '/bbindexer/scripts',
 #     body:
 #      { script: 'meta',
-#        numBlocks: 1965,
-#        filename: 'data/latest-after-20180314.json',
-#        since: 1970-01-01T00:00:00.000Z,
-#        ranAt: 2018-08-21T12:58:48.304Z },
+#        numBlocks: 57,
+#        filename: 'data/latest-20180819-to-20180824.json',
+#        since: '2018-08-19T00:00:00Z',
+#        ranAt: 2018-08-26T00:25:16.854Z },
 #     query: {} }
-#
-#
-# Elasticsearch TRACE: 2018-08-21T12:58:49Z
+
+
+# Elasticsearch TRACE: 2018-08-26T00:25:16Z
 #   -> POST http://localhost:9200/bbindexer/scripts
 #   {
 #     "script": "meta",
-#     "numBlocks": 1965,
-#     "filename": "data/latest-after-20180314.json",
-#     "since": "1970-01-01T00:00:00.000Z",
-#     "ranAt": "2018-08-21T12:58:48.304Z"
+#     "numBlocks": 57,
+#     "filename": "data/latest-20180819-to-20180824.json",
+#     "since": "2018-08-19T00:00:00Z",
+#     "ranAt": "2018-08-26T00:25:16.854Z"
 #   }
 #   <- 201
 #   {
 #     "_index": "bbindexer",
 #     "_type": "scripts",
-#     "_id": "AWVckPawo8z7fxr9sXXM",
+#     "_id": "FKaec2UBizCTN0xZ4Z1y",
 #     "_version": 1,
+#     "result": "created",
 #     "_shards": {
 #       "total": 2,
 #       "successful": 1,
 #       "failed": 0
 #     },
-#     "created": true
+#     "_seq_no": 0,
+#     "_primary_term": 1
 #   }
-#
-# Elasticsearch DEBUG: 2018-08-21T12:58:49Z
+
+# Elasticsearch DEBUG: 2018-08-26T00:25:16Z
 #   Request complete
-#
+
 # indexed
 
 #
