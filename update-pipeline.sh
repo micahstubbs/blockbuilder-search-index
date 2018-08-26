@@ -144,54 +144,44 @@ coffee gist-meta.coffee data/latest-20180819-to-20180824.json $UPDATE_AFTER_TIME
 #
 # let's clone the gists we just found
 #
-coffee gist-cloner.coffee data/latest-20180314-to-20180820.json
-# From https://gist.github.com/cec274f418b8675efaead3a56a5b324b
-#  * branch            master     -> FETCH_HEAD
-# Already up-to-date.
-# cec274f418b8675efaead3a56a5b324b yonicd 0 From https://gist.github.com/cec274f418b8675efaead3a56a5b324b
-#  * branch            master     -> FETCH_HEAD
-#
-# From https://gist.github.com/4bc59fca901388ebe4905bdb19af1567
-#  * branch            master     -> FETCH_HEAD
-# Already up-to-date.
-# 4bc59fca901388ebe4905bdb19af1567 yonicd 0 From https://gist.github.com/4bc59fca901388ebe4905bdb19af1567
-#  * branch            master     -> FETCH_HEAD
-#
+coffee gist-cloner.coffee data/latest-20180819-to-20180824.json
 # done writing files
-# Elasticsearch DEBUG: 2018-08-21T13:14:54Z
+# Elasticsearch DEBUG: 2018-08-26T00:40:39Z
 #   starting request { method: 'POST',
 #     path: '/bbindexer/scripts',
 #     body:
 #      { script: 'content',
 #        timeouts: [],
-#        filename: 'data/latest-20180314-to-20180820.json',
-#        ranAt: 2018-08-21T13:14:54.063Z },
+#        filename: 'data/latest-20180819-to-20180824.json',
+#        ranAt: 2018-08-26T00:40:39.108Z },
 #     query: {} }
 #
 #
-# Elasticsearch TRACE: 2018-08-21T13:14:54Z
+# Elasticsearch TRACE: 2018-08-26T00:40:39Z
 #   -> POST http://localhost:9200/bbindexer/scripts
 #   {
 #     "script": "content",
 #     "timeouts": [],
-#     "filename": "data/latest-20180314-to-20180820.json",
-#     "ranAt": "2018-08-21T13:14:54.063Z"
+#     "filename": "data/latest-20180819-to-20180824.json",
+#     "ranAt": "2018-08-26T00:40:39.108Z"
 #   }
 #   <- 201
 #   {
 #     "_index": "bbindexer",
 #     "_type": "scripts",
-#     "_id": "AWVcn7EAo8z7fxr9sXXS",
+#     "_id": "Faasc2UBizCTN0xZ853P",
 #     "_version": 1,
+#     "result": "created",
 #     "_shards": {
 #       "total": 2,
 #       "successful": 1,
 #       "failed": 0
 #     },
-#     "created": true
+#     "_seq_no": 1,
+#     "_primary_term": 1
 #   }
 #
-# Elasticsearch DEBUG: 2018-08-21T13:14:54Z
+# Elasticsearch DEBUG: 2018-08-26T00:40:39Z
 #   Request complete
 #
 # indexed
