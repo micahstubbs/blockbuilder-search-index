@@ -43,7 +43,7 @@ const gistParser = function(parentProps, gist, gistCb) {
 
   fileBlocks = fileBlocks.concat(filepruned)
   // console.log('fileBlocks', fileBlocks)
-  console.log('fileNames from gistParser', fileNames)
+  // console.log('fileNames from gistParser', fileNames)
 
   return async.each(
     fileNames,
@@ -63,11 +63,11 @@ const gistParser = function(parentProps, gist, gistCb) {
         ].includes(ext)
       ) {
         const file = folder + '/' + fileName
-        console.log('file', file)
+        // console.log('file', file)
         return fs.readFile(file, function(err, data) {
           let numColors
           if (!data) {
-            console.log('no data, early return')
+            // console.log('no data, early return')
             return fileCb()
           }
           const contents = data.toString()
@@ -81,10 +81,10 @@ const gistParser = function(parentProps, gist, gistCb) {
               moduleHash,
               gistModuleHash
             })
-            console.log('fileName is index.html')
-            console.log('numLibs', numLibs)
-            console.log('version', version)
-            console.log('modules', modules)
+            // console.log('fileName is index.html')
+            // console.log('numLibs', numLibs)
+            // console.log('version', version)
+            // console.log('modules', modules)
             gist.d3version = version
           }
           if (['.html', '.js', '.coffee'].includes(ext)) {
