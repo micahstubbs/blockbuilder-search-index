@@ -222,4 +222,5 @@ ls -lAFh
 # now let's call another shell script to generate the 
 # blocks graph metadata
 #
+cd $BLOCKBUILDER_SEARCH_INDEX_HOME
 sh update-pipeline-blocks-graph.sh
