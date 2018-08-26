@@ -12,17 +12,17 @@
 
 
 BLOCKBUILDER_SEARCH_INDEX_HOME="/Users/m/workspace/blockbuilder-search-index"
-UPDATE_AFTER_TIMESTAMP="2018-03-14T00:00:00Z"
+UPDATE_AFTER_TIMESTAMP="2018-08-19T00:00:00Z"
 
 cd $BLOCKBUILDER_SEARCH_INDEX_HOME
 
 coffee combine-users.coffee
 # 205 users from blocks links in SO
 # 468 users from blocks links in knight course
-# 2594 users added from bb
-# 200 added from manual list of users
-# 39 users added from blocksplorer
-# 3506 users total
+# 4524 users added from bb
+# 199 added from manual list of users
+# 37 users added from blocksplorer
+# 5433 users total
 
 #
 # optionally get all blocks for new users 
@@ -32,7 +32,7 @@ coffee combine-users.coffee
 # the file data/new.json exists
 # if yes, run this command. if no, do nothing
 #  
-# coffee gist-meta.coffee data/new.json '' 'new-users'
+coffee gist-meta.coffee data/new.json '' 'new-users'
 # combining 3147 with 25277 existing blocks
 # writing 28336 blocks to data/gist-meta.json
 # writing 3147 to data/new.json
@@ -47,7 +47,7 @@ coffee combine-users.coffee
 # fixing this is required to run the whole pipeline in sequence, 
 # in autonomous mode
 #
-coffee gist-meta.coffee data/latest-20180314-to-20180820.json $UPDATE_AFTER_TIMESTAMP
+coffee gist-meta.coffee data/latest-20180819-to-20180824.json $UPDATE_AFTER_TIMESTAMP
 # x-ratelimit-remaining: 4652
 # done with yonester, found 5 gists
 # x-ratelimit-remaining: 4651
