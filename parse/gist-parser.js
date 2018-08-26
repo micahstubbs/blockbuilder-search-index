@@ -62,9 +62,11 @@ const gistParser = function(parentProps, gist, gistCb) {
         ].includes(ext)
       ) {
         const file = folder + '/' + fileName
+        console.log('file', file)
         return fs.readFile(file, function(err, data) {
           let numColors
           if (!data) {
+            console.log('no data, early return')
             return fileCb()
           }
           const contents = data.toString()
