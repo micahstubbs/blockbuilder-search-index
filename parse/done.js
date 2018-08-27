@@ -48,7 +48,7 @@ const done = function(parentProps, error) {
     },
     {
       data: apiBlocks,
-      message: 'd3 API functions entries',
+      message: 'single-block d3 API function lists',
       filePath: '/../data/parsed/blocks-api.json'
     },
     {
