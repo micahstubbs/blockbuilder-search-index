@@ -84,10 +84,10 @@ const done = function(parentProps, error) {
   )
   const fixedLength = 10
   const maxLength = fixedLength + maxDataLength + maxMessageLength
-  console.log('fixedLength', fixedLength)
-  console.log('maxDataLength', maxDataLength)
-  console.log('maxMessageLength', maxMessageLength)
-  console.log('maxLength', maxLength)
+  // console.log('fixedLength', fixedLength)
+  // console.log('maxDataLength', maxDataLength)
+  // console.log('maxMessageLength', maxMessageLength)
+  // console.log('maxLength', maxLength)
 
   filesToWrite.forEach(file => {
     let dataLength = 0
