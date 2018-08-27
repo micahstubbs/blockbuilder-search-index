@@ -7,9 +7,9 @@ const writeJson = function({ filePath, data, min, message }) {
   if (min) space = null
   let writeMessage = ''
   if (Array.isArray(data)) {
-    wroteMessage = `wrote ${data.length} ${message} to ${fullPath}`
+    writeMessage = `wrote ${data.length} ${message} to ${fullPath}`
   } else {
-    wroteMessage = `wrote ${message} to ${fullPath}`
+    writeMessage = `wrote ${message} to ${fullPath}`
   }
 
   try {
