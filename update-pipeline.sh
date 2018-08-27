@@ -137,15 +137,26 @@ coffee gist-cloner.coffee data/latest-20180824-to-20180825.json
 #
 # indexed
 
-coffee parse.coffee
-# 37320 '0df732160f5eff68c6c683ef3a18f76e'
-# 37321 'a6f6f4a4588b390ba866710e55c77c20'
+# coffee parse.coffee
+
+# try new command from branch
+# https://github.com/micahstubbs/blockbuilder-search-index/tree/micah/55/exp/parse-modules 
+#
+# node parse
+#
+# gist 757ad6ea093000bf1900d6c0e2a9b126 romsson
+# gist 7fba0feaccd30a12fffcfaa42b79a2e7 tomshanley
 # done
 # skipped 0 missing files
-# wrote 10445 API blocks
-# wrote 11522 Color blocks
-# wrote 149198 Files blocks
-# wrote 37321 total blocks
+# wrote d3 API functions                         to data/parsed/apis.json
+# wrote colors                                   to data/parsed/colors.json
+# wrote 37346 block metadata entries             to data/parsed/blocks.json
+# wrote 37346 minified block metadata entries    to data/parsed/blocks-min.json
+# wrote 10446 single-block d3 API function lists to data/parsed/blocks-api.json
+# wrote 11523 colors entries                     to data/parsed/blocks-colors.json
+# wrote 11523 minified colors entries            to data/parsed/blocks-colors-min.json
+# wrote 0 file metadata entries                  to data/parsed/files-blocks.json
+# wrote 3844 script tags                         to data/parsed/script-tags.jsons
 
 cd data/parsed
 pwd
