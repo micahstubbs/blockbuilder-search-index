@@ -13,23 +13,23 @@ const done = function(parentProps, err) {
     fileBlocks,
     libHash,
     moduleHash,
-    scriptTagSet
+    scriptTagsSet
   } = parentProps
   console.log('done') //, apiHash
   // console.log('moduleHash from done', moduleHash)
   console.log(`skipped ${missing} missing files`)
-  const scriptTags = Array.from(scriptTagSet)
+  const scriptTags = Array.from(scriptTagsSet).sort()
   fs.writeFileSync(
     __dirname + '/../data/parsed/apis.json',
-    JSON.stringify(apiHash)
+    JSON.stringify(apiHash, null, 2)
   )
   fs.writeFileSync(
     __dirname + '/../data/parsed/colors.json',
-    JSON.stringify(colorHash)
+    JSON.stringify(colorHash, null, 2)
   )
   fs.writeFileSync(
     __dirname + '/../data/parsed/blocks.json',
-    JSON.stringify(allBlocks)
+    JSON.stringify(allBlocks, null, 2)
   )
   fs.writeFileSync(
     __dirname + '/../data/parsed/blocks-min.json',
@@ -37,11 +37,11 @@ const done = function(parentProps, err) {
   )
   fs.writeFileSync(
     __dirname + '/../data/parsed/blocks-api.json',
-    JSON.stringify(apiBlocks)
+    JSON.stringify(apiBlocks, null, 2)
   )
   fs.writeFileSync(
     __dirname + '/../data/parsed/blocks-colors.json',
-    JSON.stringify(colorBlocks)
+    JSON.stringify(colorBlocks, null, 2)
   )
   fs.writeFileSync(
     __dirname + '/../data/parsed/blocks-colors-min.json',
@@ -49,12 +49,12 @@ const done = function(parentProps, err) {
   )
   fs.writeFileSync(
     __dirname + '/../data/parsed/files-blocks.json',
-    JSON.stringify(fileBlocks)
+    JSON.stringify(fileBlocks, null, 2)
   )
   try {
     fs.writeFileSync(
       __dirname + '/../data/parsed/script-tags.json',
-      JSON.stringify(scriptTags)
+      JSON.stringify(scriptTags, null, 2)
     )
     console.log(
       `wrote ${scriptTags.length} script tags to data/parsed/script-tags.json`

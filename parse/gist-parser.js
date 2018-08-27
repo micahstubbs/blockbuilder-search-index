@@ -13,6 +13,7 @@ const parseColors = require('./parse-colors.js')
 const parseLibs = require('./parse-libs.js')
 const parseD3Version = require('./parse-d3-version.js')
 const parseD3Modules = require('./parse-d3-modules.js')
+const parseScriptTags = require('./parse-script-tags.js')
 
 const gistParser = function(parentProps, gist, gistCb) {
   let {
