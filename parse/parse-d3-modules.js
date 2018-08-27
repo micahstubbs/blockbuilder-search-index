@@ -4,7 +4,8 @@ const parseD3Modules = function({
   code,
   moduleHash,
   gistModuleHash,
-  scriptTags
+  scriptTags,
+  scriptTagsSet
 }) {
   // console.log('code from parse-d3-modules', code)
 
@@ -14,7 +15,7 @@ const parseD3Modules = function({
   // d3.tip
 
   // only parse scriptTags if passed in scriptTags prop is falsy
-  const scripts = scriptTags || parseScriptTags(code)
+  const scripts = scriptTags || parseScriptTags({ code, scriptTagsSet })
   // console.log('scripts from parse-d3-modules', scripts)
 
   scripts.forEach(function(script) {

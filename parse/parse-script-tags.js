@@ -1,4 +1,4 @@
-const parseScriptTags = function({ code }) {
+const parseScriptTags = function({ code, scriptTagsSet }) {
   // anything with a // in it (signifiying url...)
   //re = new RegExp /<script.*?src=[\"\'](.*?\/\/.+?)[\"\'].*?>/g
   // anything with a .js in it
@@ -7,6 +7,7 @@ const parseScriptTags = function({ code }) {
   let match = re.exec(code)
   while (match !== null) {
     matches.push(match[1])
+    scriptTagsSet.add(match[1])
     match = re.exec(code)
   }
   return matches

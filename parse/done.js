@@ -12,11 +12,13 @@ const done = function(parentProps, err) {
     colorBlocksMin,
     fileBlocks,
     libHash,
-    moduleHash
+    moduleHash,
+    scriptTagSet
   } = parentProps
   console.log('done') //, apiHash
   // console.log('moduleHash from done', moduleHash)
   console.log(`skipped ${missing} missing files`)
+  const scriptTags = Array.from(scriptTagSet)
   fs.writeFileSync(
     __dirname + '/../data/parsed/apis.json',
     JSON.stringify(apiHash)
@@ -49,6 +51,18 @@ const done = function(parentProps, err) {
     __dirname + '/../data/parsed/files-blocks.json',
     JSON.stringify(fileBlocks)
   )
+  try {
+    fs.writeFileSync(
+      __dirname + '/../data/parsed/script-tags.json',
+      JSON.stringify(scriptTags)
+    )
+    console.log(
+      `wrote ${scriptTags.length} script tags to data/parsed/script-tags.json`
+    )
+  } catch (error) {
+    console.log('error writing data/parsed/script-tags.json')
+    console.log(error)
+  }
 
   let libcsv = 'url,count\n'
   Object.keys(libHash).forEach(

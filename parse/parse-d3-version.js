@@ -1,8 +1,9 @@
 const parseScriptTags = require('./parse-script-tags.js')
 
-const parseD3Version = function({ code, scriptTags }) {
+const parseD3Version = function({ code, scriptTags, scriptTagsSet }) {
   // only parse scriptTags if passed in scriptTags prop is falsy
-  const scripts = scriptTags || parseScriptTags(code)
+  const scripts = scriptTags || parseScriptTags({ code, scriptTagsSet })
+
   let version = 'NA'
   scripts.forEach(function(script) {
     if (script.indexOf('d3.v4') >= 0) {

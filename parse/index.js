@@ -20,6 +20,10 @@ const minBlocks = []
 // we want an object for each file, with associated gist metadata
 let fileBlocks = []
 
+// build up a global unique list all of
+// script tags from index.html files
+const scriptTagsSet = new Set()
+
 // global cache of all api functions
 const apiHash = {}
 // global collection of blocks for API data
@@ -69,7 +73,8 @@ if (require.main === module) {
       colorBlocks,
       colorBlocksMin,
       apiBlocks,
-      moduleHash
+      moduleHash,
+      scriptTagsSet
     }),
     done.bind(null, {
       missing,
@@ -82,7 +87,8 @@ if (require.main === module) {
       colorBlocksMin,
       fileBlocks,
       libHash,
-      moduleHash
+      moduleHash,
+      scriptTagsSet
     })
   )
 }
