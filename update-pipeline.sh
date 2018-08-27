@@ -12,7 +12,7 @@
 
 
 BLOCKBUILDER_SEARCH_INDEX_HOME="/Users/m/workspace/blockbuilder-search-index"
-UPDATE_AFTER_TIMESTAMP="2018-08-19T00:00:00Z"
+UPDATE_AFTER_TIMESTAMP="2018-08-24T00:00:00Z"
 
 cd $BLOCKBUILDER_SEARCH_INDEX_HOME
 
@@ -33,63 +33,13 @@ coffee combine-users.coffee
 # if yes, run this command. if no, do nothing
 #  
 coffee gist-meta.coffee data/new.json '' 'new-users'
-# done with zischwartz, found 13 gists
-# x-ratelimit-remaining: 1793
-# x-ratelimit-remaining: 1792
-# done with zzhang115, found 21 gists
-#
-# done. number of new gists: 7911
-# combining 7911 with 29424 existing blocks
-# writing 37303 blocks to data/gist-meta.json
-# writing 7911 to data/new.json
-#
-# Elasticsearch DEBUG: 2018-08-26T00:18:45Z
-#   starting request { method: 'POST',
-#     path: '/bbindexer/scripts',
-#     body:
-#      { script: 'meta',
-#        numBlocks: 7911,
-#        filename: 'data/new.json',
-#        since: 1970-01-01T00:00:00.000Z,
-#        ranAt: 2018-08-26T00:18:45.212Z },
-#     query: {} }
-
-
-# Elasticsearch TRACE: 2018-08-26T00:18:45Z
-#   -> POST http://localhost:9200/bbindexer/scripts
-#   {
-#     "script": "meta",
-#     "numBlocks": 7911,
-#     "filename": "data/new.json",
-#     "since": "1970-01-01T00:00:00.000Z",
-#     "ranAt": "2018-08-26T00:18:45.212Z"
-#   }
-#   <- 201
-#   {
-#     "_index": "bbindexer",
-#     "_type": "scripts",
-#     "_id": "E6aYc2UBizCTN0xZ553R",
-#     "_version": 1,
-#     "result": "created",
-#     "_shards": {
-#       "total": 2,
-#       "successful": 1,
-#       "failed": 0
-#     },
-#     "_seq_no": 0,
-#     "_primary_term": 1
-#   }
-
-# Elasticsearch DEBUG: 2018-08-26T00:18:45Z
-#   Request complete
-
-# indexed
+# no change, did not run this one this time
 
 #
 # fetch the metadata for all new gists
 # for all known users from the github API
 #
-coffee gist-meta.coffee data/latest-20180819-to-20180824.json $UPDATE_AFTER_TIMESTAMP
+coffee gist-meta.coffee data/latest-20180824-to-20180825.json $UPDATE_AFTER_TIMESTAMP
 # done with zwakhall, found 0 gists
 # x-ratelimit-remaining: 0
 # done with zzolo, found 0 gists
