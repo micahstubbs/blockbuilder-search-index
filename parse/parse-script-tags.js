@@ -1,4 +1,4 @@
-const parseScriptTags = function(code) {
+const parseScriptTags = function({ code }) {
   // anything with a // in it (signifiying url...)
   //re = new RegExp /<script.*?src=[\"\'](.*?\/\/.+?)[\"\'].*?>/g
   // anything with a .js in it

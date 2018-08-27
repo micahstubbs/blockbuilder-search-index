@@ -1,14 +1,22 @@
 const parseScriptTags = require('./parse-script-tags.js')
 
-const parseD3Modules = function({ code, moduleHash, gistModuleHash }) {
+const parseD3Modules = function({
+  code,
+  moduleHash,
+  gistModuleHash,
+  scriptTags
+}) {
   // console.log('code from parse-d3-modules', code)
 
   // finds anything with the pattern d3-*. e.g. d3-legend.js or d3-transition.v1.min.js
   // TODO:
   // d3.geo.projection/raster/tile/polyhedron
   // d3.tip
-  const scripts = parseScriptTags(code)
+
+  // only parse scriptTags if passed in scriptTags prop is falsy
+  const scripts = scriptTags || parseScriptTags(code)
   // console.log('scripts from parse-d3-modules', scripts)
+
   scripts.forEach(function(script) {
     const re = /(d3-[\w-]*)(?=\.)/
     //module = script.match(re)

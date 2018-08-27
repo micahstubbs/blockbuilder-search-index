@@ -72,13 +72,17 @@ const gistParser = function(parentProps, gist, gistCb) {
           const contents = data.toString()
           // console.log('contents from gistParser readFile', contents)
           if (fileName === 'index.html') {
+            const code = contents
+            const scriptTags = parseScriptTags({ code })
+
             // TODO copy glibHash -> libHash etc for each of these
-            const numLibs = parseLibs(contents, gist, glibHash)
-            const version = parseD3Version(contents)
+            const numLibs = parseLibs({ code, gist, glibHash, scriptTags })
+            const version = parseD3Version({ code, scriptTags })
             const modules = parseD3Modules({
-              code: contents,
+              code,
               moduleHash,
-              gistModuleHash
+              gistModuleHash,
+              scriptTags
             })
             // console.log('fileName is index.html')
             // console.log('numLibs', numLibs)
