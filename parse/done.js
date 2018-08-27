@@ -24,6 +24,9 @@ const done = function(parentProps, error) {
   //
   // write out the metadata we just parsed
   //
+  //
+  // write json
+  //
   const filesToWrite = [
     {
       data: apiHash,
@@ -102,6 +105,9 @@ const done = function(parentProps, error) {
     writeJson(file)
   })
 
+  //
+  // write csv
+  //
   let libcsv = 'url,count\n'
   Object.keys(libHash).forEach(
     lib => (libcsv += lib + ',' + libHash[lib] + '\n')
