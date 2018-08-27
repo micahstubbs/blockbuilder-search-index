@@ -27,7 +27,8 @@ const gistParser = function(parentProps, gist, gistCb) {
     scriptTagsSet
   } = parentProps
   //console.log "NOT RETURNING", gist.id, singleId
-  console.log('gist.id', gist.id)
+  const gistUser = gist.user || gist.owner ? gist.owner.login : ''
+  console.log(`gist ${gist.id} ${gistUser}`)
   const fileNames = Object.keys(gist.files || {})
   // per-gist cache of api functions that we build up in place
   const gapiHash = {}

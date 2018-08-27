@@ -1,7 +1,7 @@
 const fs = require('fs')
 const writeJson = require('./write-json.js')
 
-const done = function(parentProps, err) {
+const done = function(parentProps, error) {
   const {
     missing,
     apiHash,
