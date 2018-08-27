@@ -92,32 +92,35 @@ coffee gist-meta.coffee data/latest-20180824-to-20180825.json $UPDATE_AFTER_TIME
 #
 # let's clone the gists we just found
 #
-coffee gist-cloner.coffee data/latest-20180819-to-20180824.json
+coffee gist-cloner.coffee data/latest-20180824-to-20180825.json
+# Cloning into '7fba0feaccd30a12fffcfaa42b79a2e7'...
+# 7fba0feaccd30a12fffcfaa42b79a2e7 tomshanley 0 Cloning into '7fba0feaccd30a12fffcfaa42b79a2e7'...
+#
 # done writing files
-# Elasticsearch DEBUG: 2018-08-26T00:40:39Z
+# Elasticsearch DEBUG: 2018-08-27T05:49:30Z
 #   starting request { method: 'POST',
 #     path: '/bbindexer/scripts',
 #     body:
 #      { script: 'content',
 #        timeouts: [],
-#        filename: 'data/latest-20180819-to-20180824.json',
-#        ranAt: 2018-08-26T00:40:39.108Z },
+#        filename: 'data/latest-20180824-to-20180825.json',
+#        ranAt: 2018-08-27T05:49:30.801Z },
 #     query: {} }
 #
 #
-# Elasticsearch TRACE: 2018-08-26T00:40:39Z
+# Elasticsearch TRACE: 2018-08-27T05:49:30Z
 #   -> POST http://localhost:9200/bbindexer/scripts
 #   {
 #     "script": "content",
 #     "timeouts": [],
-#     "filename": "data/latest-20180819-to-20180824.json",
-#     "ranAt": "2018-08-26T00:40:39.108Z"
+#     "filename": "data/latest-20180824-to-20180825.json",
+#     "ranAt": "2018-08-27T05:49:30.801Z"
 #   }
 #   <- 201
 #   {
 #     "_index": "bbindexer",
 #     "_type": "scripts",
-#     "_id": "Faasc2UBizCTN0xZ853P",
+#     "_id": "GKbueWUBizCTN0xZFZ1A",
 #     "_version": 1,
 #     "result": "created",
 #     "_shards": {
@@ -129,7 +132,7 @@ coffee gist-cloner.coffee data/latest-20180819-to-20180824.json
 #     "_primary_term": 1
 #   }
 #
-# Elasticsearch DEBUG: 2018-08-26T00:40:39Z
+# Elasticsearch DEBUG: 2018-08-27T05:49:30Z
 #   Request complete
 #
 # indexed
