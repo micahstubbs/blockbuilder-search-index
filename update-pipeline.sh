@@ -40,41 +40,39 @@ coffee gist-meta.coffee data/new.json '' 'new-users'
 # for all known users from the github API
 #
 coffee gist-meta.coffee data/latest-20180824-to-20180825.json $UPDATE_AFTER_TIMESTAMP
-# done with zwakhall, found 0 gists
-# x-ratelimit-remaining: 0
+# done with zzhang115, found 0 gists
+# rate limit remaining 418
 # done with zzolo, found 0 gists
-#
 # done. number of new gists: 57
-# combining 57 with 37303 existing blocks
-# writing 37321 blocks to data/gist-meta.json
-# writing 57 to data/latest-20180819-to-20180824.json
-#
-# Elasticsearch DEBUG: 2018-08-26T00:25:16Z
+# combining 57 with 37321 existing blocks
+# writing 37346 blocks to data/gist-meta.json
+# writing 57 to data/latest-20180824-to-20180825.json
+# Elasticsearch DEBUG: 2018-08-27T05:29:31Z
 #   starting request { method: 'POST',
 #     path: '/bbindexer/scripts',
 #     body:
 #      { script: 'meta',
 #        numBlocks: 57,
-#        filename: 'data/latest-20180819-to-20180824.json',
-#        since: '2018-08-19T00:00:00Z',
-#        ranAt: 2018-08-26T00:25:16.854Z },
+#        filename: 'data/latest-20180824-to-20180825.json',
+#        since: '2018-08-24T00:00:00Z',
+#        ranAt: 2018-08-27T05:29:31.657Z },
 #     query: {} }
-
-
-# Elasticsearch TRACE: 2018-08-26T00:25:16Z
+#
+#
+# Elasticsearch TRACE: 2018-08-27T05:29:31Z
 #   -> POST http://localhost:9200/bbindexer/scripts
 #   {
 #     "script": "meta",
 #     "numBlocks": 57,
-#     "filename": "data/latest-20180819-to-20180824.json",
-#     "since": "2018-08-19T00:00:00Z",
-#     "ranAt": "2018-08-26T00:25:16.854Z"
+#     "filename": "data/latest-20180824-to-20180825.json",
+#     "since": "2018-08-24T00:00:00Z",
+#     "ranAt": "2018-08-27T05:29:31.657Z"
 #   }
 #   <- 201
 #   {
 #     "_index": "bbindexer",
 #     "_type": "scripts",
-#     "_id": "FKaec2UBizCTN0xZ4Z1y",
+#     "_id": "F6bbeWUBizCTN0xZyZ1N",
 #     "_version": 1,
 #     "result": "created",
 #     "_shards": {
@@ -82,15 +80,15 @@ coffee gist-meta.coffee data/latest-20180824-to-20180825.json $UPDATE_AFTER_TIME
 #       "successful": 1,
 #       "failed": 0
 #     },
-#     "_seq_no": 0,
+#     "_seq_no": 1,
 #     "_primary_term": 1
 #   }
-
-# Elasticsearch DEBUG: 2018-08-26T00:25:16Z
+#
+# Elasticsearch DEBUG: 2018-08-27T05:29:31Z
 #   Request complete
-
+#
 # indexed
-
+#
 #
 # let's clone the gists we just found
 #
