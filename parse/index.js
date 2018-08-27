@@ -50,7 +50,7 @@ let gistMeta = JSON.parse(
 // make gistMeta smaller for faster testing
 // gistMeta = gistMeta.slice(704, 705)
 // gistMeta = gistMeta.slice(20000, 20001)
-gistMeta = gistMeta.slice(20000, 20200)
+// gistMeta = gistMeta.slice(20000, 20200)
 console.log(gistMeta.length)
 
 let i = 0
