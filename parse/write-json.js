@@ -20,3 +20,5 @@ const writeJson = function({ filePath, data, min, message }) {
     console.log(error)
   }
 }
+
+module.exports = writeJson
