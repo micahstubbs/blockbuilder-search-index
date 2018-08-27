@@ -1,4 +1,5 @@
 const fs = require('fs')
+const writeJson = require('./write-json.js')
 
 const done = function(parentProps, err) {
   const {
@@ -19,50 +20,57 @@ const done = function(parentProps, err) {
   // console.log('moduleHash from done', moduleHash)
   console.log(`skipped ${missing} missing files`)
   const scriptTags = Array.from(scriptTagsSet).sort()
-  fs.writeFileSync(
-    __dirname + '/../data/parsed/apis.json',
-    JSON.stringify(apiHash, null, 2)
-  )
-  fs.writeFileSync(
-    __dirname + '/../data/parsed/colors.json',
-    JSON.stringify(colorHash, null, 2)
-  )
-  fs.writeFileSync(
-    __dirname + '/../data/parsed/blocks.json',
-    JSON.stringify(allBlocks, null, 2)
-  )
-  fs.writeFileSync(
-    __dirname + '/../data/parsed/blocks-min.json',
-    JSON.stringify(minBlocks)
-  )
-  fs.writeFileSync(
-    __dirname + '/../data/parsed/blocks-api.json',
-    JSON.stringify(apiBlocks, null, 2)
-  )
-  fs.writeFileSync(
-    __dirname + '/../data/parsed/blocks-colors.json',
-    JSON.stringify(colorBlocks, null, 2)
-  )
-  fs.writeFileSync(
-    __dirname + '/../data/parsed/blocks-colors-min.json',
-    JSON.stringify(colorBlocksMin)
-  )
-  fs.writeFileSync(
-    __dirname + '/../data/parsed/files-blocks.json',
-    JSON.stringify(fileBlocks, null, 2)
-  )
-  try {
-    fs.writeFileSync(
-      __dirname + '/../data/parsed/script-tags.json',
-      JSON.stringify(scriptTags, null, 2)
-    )
-    console.log(
-      `wrote ${scriptTags.length} script tags to data/parsed/script-tags.json`
-    )
-  } catch (error) {
-    console.log('error writing data/parsed/script-tags.json')
-    console.log(error)
-  }
+
+  //
+  // write out the metadata we just parsed
+  //
+  writeJson({
+    data: apiHash,
+    message: 'd3 API functions',
+    filePath: '/../data/parsed/apis.json'
+  })
+  writeJson({
+    data: colorHash,
+    message: 'colors',
+    filePath: '/../data/parsed/colors.json'
+  })
+  writeJson({
+    data: allBlocks,
+    message: 'block metadata entries',
+    filePath: '/../data/parsed/blocks.json'
+  })
+  writeJson({
+    min: true,
+    data: minBlocks,
+    message: 'minified block metadata entries',
+    filePath: '/../data/parsed/blocks-min.json'
+  })
+  writeJson({
+    data: apiBlocks,
+    message: 'd3 API functions entries',
+    filePath: '/../data/parsed/blocks-api.json'
+  })
+  writeJson({
+    data: colorBlocks,
+    message: 'colors entries',
+    filePath: '/../data/parsed/blocks-colors.json'
+  })
+  writeJson({
+    min: true,
+    data: colorBlocksMin,
+    message: 'minified colors entries',
+    filePath: '/../data/parsed/blocks-colors-min.json'
+  })
+  writeJson({
+    data: fileBlocks,
+    message: 'file metadata entries',
+    filePath: '/../data/parsed/files-blocks.json'
+  })
+  writeJson({
+    data: scriptTags,
+    message: 'script tags',
+    filePath: '/../data/parsed/script-tags.json'
+  })
 
   let libcsv = 'url,count\n'
   Object.keys(libHash).forEach(
@@ -76,13 +84,9 @@ const done = function(parentProps, err) {
     .forEach(module => (modulescsv += module + ',' + moduleHash[module] + '\n'))
   fs.writeFileSync(__dirname + '/../data/parsed/modules.csv', modulescsv)
 
-  if (err) {
-    console.log('err', err)
+  if (error) {
+    console.log('error', error)
   }
-  console.log(`wrote ${apiBlocks.length} API blocks`)
-  console.log(`wrote ${colorBlocks.length} Color blocks`)
-  console.log(`wrote ${fileBlocks.length} Files blocks`)
-  return console.log(`wrote ${allBlocks.length} total blocks`)
 }
 
 module.exports = done
