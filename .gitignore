@@ -15,3 +15,4 @@ data/latest*
 .DS_Store
 update-log*
 gist-meta-users-part-2.csv
+data/gists-clones.tar.bz2
