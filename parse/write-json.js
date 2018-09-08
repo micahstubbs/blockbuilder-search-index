@@ -3,7 +3,7 @@ const fs = require('fs')
 const writeJson = function({ filePath, data, min, message }) {
   // pretty print with 2 spaces by default
   let space = 2
-  let fullPath = `${__dirname}${filePath}`
+  let fullPath = `${filePath}`
   const trimmedPath = filePath.replace('/../', '')
   if (min) space = null
   let writeMessage = ''

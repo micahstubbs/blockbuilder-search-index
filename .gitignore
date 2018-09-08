@@ -4,6 +4,7 @@ data/archive
 data/gist-meta.json
 data/new.json
 data/parsed/
+data/parsed-new-method
 data/gists/
 data/gists-clones/
 data/gists-files/
