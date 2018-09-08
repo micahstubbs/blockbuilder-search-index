@@ -1,4 +1,10 @@
-const parseScriptTags = function({ code, scriptTagsSet }) {
+const parseFileNameFromScriptTag = require('./parse-filename-from-script-tag.js')
+
+const parseScriptTags = function({
+  code,
+  scriptTagsSet,
+  scriptTagFilenamesSet
+}) {
   // anything with a // in it (signifiying url...)
   //re = new RegExp /<script.*?src=[\"\'](.*?\/\/.+?)[\"\'].*?>/g
   // anything with a .js in it
@@ -6,8 +12,16 @@ const parseScriptTags = function({ code, scriptTagsSet }) {
   const matches = []
   let match = re.exec(code)
   while (match !== null) {
-    matches.push(match[1])
-    scriptTagsSet.add(match[1])
+    const scriptTagString = match[1]
+    matches.push(scriptTagString)
+    scriptTagsSet.add(scriptTagString)
+    // as a side effect
+    // parse the filename out from the script tag
+    parseFileNameFromScriptTag({ scriptTagString, scriptTagFilenamesSet })
+    //
+    // not sure if this is having it's desired effect
+    // TODO investigate this
+    //
     match = re.exec(code)
   }
   return matches

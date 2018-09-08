@@ -23,6 +23,7 @@ let fileBlocks = []
 // build up a global unique list all of
 // script tags from index.html files
 const scriptTagsSet = new Set()
+const scriptTagFilenamesSet = new Set()
 
 // global cache of all api functions
 const apiHash = {}
@@ -75,7 +76,8 @@ if (require.main === module) {
       colorBlocksMin,
       apiBlocks,
       moduleHash,
-      scriptTagsSet
+      scriptTagsSet,
+      scriptTagFilenamesSet
     }),
     done.bind(null, {
       missing,
@@ -89,7 +91,8 @@ if (require.main === module) {
       fileBlocks,
       libHash,
       moduleHash,
-      scriptTagsSet
+      scriptTagsSet,
+      scriptTagFilenamesSet
     })
   )
 }

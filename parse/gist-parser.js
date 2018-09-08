@@ -24,7 +24,8 @@ const gistParser = function(parentProps, gist, gistCb) {
     colorBlocksMin,
     apiBlocks,
     moduleHash,
-    scriptTagsSet
+    scriptTagsSet,
+    scriptTagFilenamesSet
   } = parentProps
   //console.log "NOT RETURNING", gist.id, singleId
   const gistUser = gist.user || gist.owner ? gist.owner.login : ''
@@ -76,7 +77,11 @@ const gistParser = function(parentProps, gist, gistCb) {
           // console.log('contents from gistParser readFile', contents)
           if (fileName === 'index.html') {
             const code = contents
-            const scriptTags = parseScriptTags({ code, scriptTagsSet })
+            const scriptTags = parseScriptTags({
+              code,
+              scriptTagsSet,
+              scriptTagFilenamesSet
+            })
 
             // TODO copy glibHash -> libHash etc for each of these
             const numLibs = parseLibs({

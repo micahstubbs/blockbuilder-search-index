@@ -14,12 +14,15 @@ const done = function(parentProps, error) {
     fileBlocks,
     libHash,
     moduleHash,
-    scriptTagsSet
+    scriptTagsSet,
+    scriptTagFilenamesSet
   } = parentProps
   console.log('done') //, apiHash
   // console.log('moduleHash from done', moduleHash)
   console.log(`skipped ${missing} missing files`)
   const scriptTags = Array.from(scriptTagsSet).sort()
+  const scriptTagFilenames = Array.from(scriptTagFilenamesSet).sort()
+  const scriptTagFilenamesD3 = scriptTagFilenames.filter(f => f.includes('d3'))
 
   // specify the output directory
   const outputDir = `${__dirname}/../data/parsed-new-method`
@@ -80,6 +83,16 @@ const done = function(parentProps, error) {
       data: scriptTags,
       message: 'script tags',
       filePath: `${outputDir}/script-tags.json`
+    },
+    {
+      data: scriptTagFilenames,
+      message: 'filenames from script tags',
+      filePath: `${outputDir}/script-tags-filenames.json`
+    },
+    {
+      data: scriptTagFilenamesD3,
+      message: 'filenames from script tags that contain the string d3',
+      filePath: `${outputDir}/script-tags-filenames-d3.json`
     }
   ]
   const maxMessageLength = Math.max(
