@@ -1,0 +1,1122 @@
+[
+  {
+    "filename": "d3.v3.min.js",
+    "count": 5198
+  },
+  {
+    "filename": "d3.min.js",
+    "count": 2656
+  },
+  {
+    "filename": "d3.v3.js",
+    "count": 1589
+  },
+  {
+    "filename": "d3.js",
+    "count": 302
+  },
+  {
+    "filename": "d3.geo.projection.v0.min.js",
+    "count": 279
+  },
+  {
+    "filename": "d3.v2.js",
+    "count": 276
+  },
+  {
+    "filename": "d3.v2.min.js",
+    "count": 146
+  },
+  {
+    "filename": "d3.tip.v0.6.3.js",
+    "count": 127
+  },
+  {
+    "filename": "nv.d3.min-new.js",
+    "count": 65
+  },
+  {
+    "filename": "d3-jetpack.js",
+    "count": 59
+  },
+  {
+    "filename": "d3.quadtiles.js",
+    "count": 58
+  },
+  {
+    "filename": "d3.carto.map.js",
+    "count": 57
+  },
+  {
+    "filename": "nv.d3.js",
+    "count": 51
+  },
+  {
+    "filename": "d3.geo.projection.min.js",
+    "count": 49
+  },
+  {
+    "filename": "d3.geo.raster.js",
+    "count": 48
+  },
+  {
+    "filename": "d3-starterkit.js",
+    "count": 47
+  },
+  {
+    "filename": "d3-legend.js",
+    "count": 46
+  },
+  {
+    "filename": "d3.layout.js",
+    "count": 45
+  },
+  {
+    "filename": "d3-3.5.5.js",
+    "count": 40
+  },
+  {
+    "filename": "d3.geo.tile.v0.min.js",
+    "count": 28
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.35.min.js",
+    "count": 27
+  },
+  {
+    "filename": "d3-legend.min.js",
+    "count": 25
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.4.min.js",
+    "count": 23
+  },
+  {
+    "filename": "d3-queue.v2.min.js",
+    "count": 21
+  },
+  {
+    "filename": "d3.geom.js",
+    "count": 21
+  },
+  {
+    "filename": "d3-tip.min.js",
+    "count": 18
+  },
+  {
+    "filename": "d3.tip.js",
+    "count": 15
+  },
+  {
+    "filename": "d3.geo.tile.min.js",
+    "count": 15
+  },
+  {
+    "filename": "d3.hexbin.min.js",
+    "count": 15
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.28.min.js",
+    "count": 14
+  },
+  {
+    "filename": "d3.tip.min.js",
+    "count": 13
+  },
+  {
+    "filename": "d3.hexbin.v0.min.js",
+    "count": 13
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.18.min.js",
+    "count": 12
+  },
+  {
+    "filename": "d3-grid.js",
+    "count": 12
+  },
+  {
+    "filename": "d3-scale.v0.6.min.js",
+    "count": 12
+  },
+  {
+    "filename": "d3.geo.js",
+    "count": 12
+  },
+  {
+    "filename": "d3.layout.orbit.js",
+    "count": 12
+  },
+  {
+    "filename": "d3.sketchy.js",
+    "count": 11
+  },
+  {
+    "filename": "d3.time.js",
+    "count": 10
+  },
+  {
+    "filename": "d3.parcoords.js",
+    "count": 10
+  },
+  {
+    "filename": "d3fc.js",
+    "count": 10
+  },
+  {
+    "filename": "d3kit.min.js",
+    "count": 10
+  },
+  {
+    "filename": "d3-tip.js",
+    "count": 9
+  },
+  {
+    "filename": "d3.legend.js",
+    "count": 9
+  },
+  {
+    "filename": "d3.svg.circularbrush.js",
+    "count": 9
+  },
+  {
+    "filename": "d3.layout.timeline.js",
+    "count": 9
+  },
+  {
+    "filename": "d3.layout.cloud.js",
+    "count": 9
+  },
+  {
+    "filename": "d3.slider.js",
+    "count": 8
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.29.min.js",
+    "count": 8
+  },
+  {
+    "filename": "d3.geo.zoom.js",
+    "count": 8
+  },
+  {
+    "filename": "d3.layout.chord.sort.js",
+    "count": 8
+  },
+  {
+    "filename": "d3.latest.js",
+    "count": 7
+  },
+  {
+    "filename": "d3.sankey.js",
+    "count": 7
+  },
+  {
+    "filename": "d3-iconarray.js",
+    "count": 7
+  },
+  {
+    "filename": "d3-time.v0.2.min.js",
+    "count": 7
+  },
+  {
+    "filename": "d3.csv.js",
+    "count": 7
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.33.min.js",
+    "count": 6
+  },
+  {
+    "filename": "gexfd3.js",
+    "count": 6
+  },
+  {
+    "filename": "d3.geo.polyhedron.v0.min.js",
+    "count": 5
+  },
+  {
+    "filename": "d3-shape.js",
+    "count": 5
+  },
+  {
+    "filename": "d3.hexbin.v0.js",
+    "count": 5
+  },
+  {
+    "filename": "d3fc.min.js",
+    "count": 5
+  },
+  {
+    "filename": "d3.tips.js",
+    "count": 5
+  },
+  {
+    "filename": "d3.stretched.chord.js",
+    "count": 5
+  },
+  {
+    "filename": "d3.hexbin.js",
+    "count": 5
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.9.min.js",
+    "count": 5
+  },
+  {
+    "filename": "nv.d3.min.js",
+    "count": 5
+  },
+  {
+    "filename": "d3-path.js",
+    "count": 5
+  },
+  {
+    "filename": "backbone.d3view.js",
+    "count": 5
+  },
+  {
+    "filename": "TileLayer.d3_geoJSON.js",
+    "count": 5
+  },
+  {
+    "filename": "d3.jsonp.js",
+    "count": 5
+  },
+  {
+    "filename": "d3.chart.min.js",
+    "count": 5
+  },
+  {
+    "filename": "d3.geo.polyhedron.js",
+    "count": 4
+  },
+  {
+    "filename": "d3.geom.concaveHull.js",
+    "count": 4
+  },
+  {
+    "filename": "d3.custom.js",
+    "count": 4
+  },
+  {
+    "filename": "d3.chart.js",
+    "count": 4
+  },
+  {
+    "filename": "d3.phylogram.js",
+    "count": 4
+  },
+  {
+    "filename": "d3.geo.polyhedron.min.js",
+    "count": 4
+  },
+  {
+    "filename": "d3-array.v0.7.min.js",
+    "count": 4
+  },
+  {
+    "filename": "d3.svg.ribbon.js",
+    "count": 4
+  },
+  {
+    "filename": "d3-polygon.v0.2.min.js",
+    "count": 4
+  },
+  {
+    "filename": "d3.geom.min.js",
+    "count": 3
+  },
+  {
+    "filename": "d3cola.js",
+    "count": 3
+  },
+  {
+    "filename": "d3-comparator.js",
+    "count": 3
+  },
+  {
+    "filename": "d3_code_slopegraph_v2.js",
+    "count": 3
+  },
+  {
+    "filename": "d3_code_grid.js",
+    "count": 3
+  },
+  {
+    "filename": "d3.layout.min.js",
+    "count": 3
+  },
+  {
+    "filename": "d3.v3.1.8.js",
+    "count": 3
+  },
+  {
+    "filename": "d3.scatterplotwithlineplot.js",
+    "count": 3
+  },
+  {
+    "filename": "d3.hemicycle.js",
+    "count": 3
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.15.min.js",
+    "count": 3
+  },
+  {
+    "filename": "d3_code_hotspots.js",
+    "count": 3
+  },
+  {
+    "filename": "d3.canvas-hexbin.js",
+    "count": 3
+  },
+  {
+    "filename": "d3-ForceEdgeBundling.js",
+    "count": 3
+  },
+  {
+    "filename": "d3-voronoi.v0.3.min.js",
+    "count": 3
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.23.min.js",
+    "count": 3
+  },
+  {
+    "filename": "d3-record.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-timer.v0.1.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3multiline.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-glyphEdge.js",
+    "count": 2
+  },
+  {
+    "filename": "dod3.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.v2.patched.js",
+    "count": 2
+  },
+  {
+    "filename": "TileLayer.d3_topoJSON.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.geom.contour.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.geo.zoom.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.35.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.29.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.behavior.js",
+    "count": 2
+  },
+  {
+    "filename": "d3_code_heatmap_cal.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.behavior.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-dropdownmenu.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.floatingScale.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.promise.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.22.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-x3dom-axis.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.z.collide.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.superformula.v0.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.chart.layout.hierarchy.js",
+    "count": 2
+  },
+  {
+    "filename": "d3_code_toggle_yn.js",
+    "count": 2
+  },
+  {
+    "filename": "reuseable.d3.charts.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-ease.v0.7.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-timer.v0.3.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.24.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.selection.template.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.hive.min.js",
+    "count": 2
+  },
+  {
+    "filename": "dagre-d3.min.js",
+    "count": 2
+  },
+  {
+    "filename": "L.TileLayer.d3_JSON_mapsense.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.scatterplot.js",
+    "count": 2
+  },
+  {
+    "filename": "d3tip.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-random.v0.2.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.21.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.parsets.js",
+    "count": 2
+  },
+  {
+    "filename": "d3mod.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-array.v0.6.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-axis.v0.2.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.fishbone.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-selection.v0.6.min.js",
+    "count": 2
+  },
+  {
+    "filename": "gantt-chart-d3v2.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.layout.indent.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-format.v0.5.min.js",
+    "count": 2
+  },
+  {
+    "filename": "d3-hierarchy.min.js",
+    "count": 2
+  },
+  {
+    "filename": "gantt-chart-d3v21.js",
+    "count": 2
+  },
+  {
+    "filename": "d3plus.js",
+    "count": 2
+  },
+  {
+    "filename": "d3.layout.arcDiagram.js",
+    "count": 2
+  },
+  {
+    "filename": "mpld3_defaults.js",
+    "count": 1
+  },
+  {
+    "filename": "leaflet.d3.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-masonic.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-viz.js",
+    "count": 1
+  },
+  {
+    "filename": "d3Stocks.js",
+    "count": 1
+  },
+  {
+    "filename": "d3statebin.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.svg.multibrush.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.min3.1.5.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.geo2circle.js",
+    "count": 1
+  },
+  {
+    "filename": "ra-4fdfcfd4773d48d3",
+    "count": 1
+  },
+  {
+    "filename": "angularjs-nvd3-directives.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.place.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.selection.ich.template.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_map.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.layout.treemap2.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.selection.template.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3sliderQ.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.phylonator.js",
+    "count": 1
+  },
+  {
+    "filename": "openhours-d3.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.layout.picturecloud.js",
+    "count": 1
+  },
+  {
+    "filename": "d3pie.js",
+    "count": 1
+  },
+  {
+    "filename": "muninow-d3.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_selectAll_transition_explained.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-layout-example.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.ml.js",
+    "count": 1
+  },
+  {
+    "filename": "d3cloud.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.v3-modified.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_japanese_numbers.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_times_tables.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_ages.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_sggs_bars.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_legend.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_updatechart.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_pure.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_move.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_slider.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-financial-components.min.js",
+    "count": 1
+  },
+  {
+    "filename": "workingRd3.js",
+    "count": 1
+  },
+  {
+    "filename": "simpd3.js",
+    "count": 1
+  },
+  {
+    "filename": "twd3.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.v3.2.1.js",
+    "count": 1
+  },
+  {
+    "filename": "readme-d3_modded.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.geo.polyhedron.v0.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-selection.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.legend.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.layout.adjacencyMatrix.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.gnarly.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.vorTopo.js",
+    "count": 1
+  },
+  {
+    "filename": "d3linewithlegend.js",
+    "count": 1
+  },
+  {
+    "filename": "d3line.js",
+    "count": 1
+  },
+  {
+    "filename": "d3legend.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-3.5.5.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.geo.projection.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.timelineplot.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.scatterplotwithlineplotellipses.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.doublebarchart2.js",
+    "count": 1
+  },
+  {
+    "filename": "490c1d3b8955f8681f24.js",
+    "count": 1
+  },
+  {
+    "filename": "tdad3.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-path.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.ez.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_lodash_groupby.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.layout.randomspread.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.layout.triangle.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.layout.line.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_shape.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.layout.circle.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.qq.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.rollup.min.js",
+    "count": 1
+  },
+  {
+    "filename": "r2d3.v2.js",
+    "count": 1
+  },
+  {
+    "filename": "d3tree.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.carto.hexbin.js",
+    "count": 1
+  },
+  {
+    "filename": "crime-map-d3carto.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-randompoints.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.geomap.dependencies.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.geomap.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-light.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.selectable.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-collection.v0.1.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-color.v0.4.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-interpolate.v0.5.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-radial.js",
+    "count": 1
+  },
+  {
+    "filename": "d3ArrayAdapter.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.hive.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.16.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-timeline.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.punchcard.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-timer.v0.2.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-random.v0.1.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-polygon.v0.1.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_hello_colour.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_slopegraph.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_grid_data.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_grid_draw.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_grid_reusable.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_grid_colours.js",
+    "count": 1
+  },
+  {
+    "filename": "d3_code_simple_grid.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.geodesic.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3fc.bundle.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-3.5.15.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.boxesplot.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-color.v0.3.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-interpolate.v0.4.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-scale.v0.5.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.layout.force3d.js",
+    "count": 1
+  },
+  {
+    "filename": "g2j4d3.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.rollup.v0.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.v2.min_.js",
+    "count": 1
+  },
+  {
+    "filename": "reusable.d3.charts.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.26.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.hive.v0.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-transform.js",
+    "count": 1
+  },
+  {
+    "filename": "rkophs.modified.d3.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3now.js",
+    "count": 1
+  },
+  {
+    "filename": "d3LineChart.js",
+    "count": 1
+  },
+  {
+    "filename": "leaflet-d3.js",
+    "count": 1
+  },
+  {
+    "filename": "d3fc-rebind.js",
+    "count": 1
+  },
+  {
+    "filename": "d3fc-label-layout.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-context-menu.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.promise.js",
+    "count": 1
+  },
+  {
+    "filename": "d3moji.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.geo.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-iconarray.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-hexbin.v0.2.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.superformula.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-quadtree.v0.6.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.geo.tile.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-with-jetpack.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-maps-choropleth-3f5e73b3328da99614131ce91e2a9dcf.min.js",
+    "count": 1
+  },
+  {
+    "filename": "dagre-d3.js",
+    "count": 1
+  },
+  {
+    "filename": "d3parcoords.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-quadtree.debug.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-timer.v0.4.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.v4.0.0-alpha.28.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-time-format.v0.3.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3.v4.min.js",
+    "count": 1
+  },
+  {
+    "filename": "d3-scale-chromatic.v1.min.js",
+    "count": 1
+  }
+]
