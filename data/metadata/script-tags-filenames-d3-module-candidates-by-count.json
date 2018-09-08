@@ -1,31 +1,7 @@
 [
   {
-    "filename": "d3.v3.min.js",
-    "count": 5198
-  },
-  {
-    "filename": "d3.min.js",
-    "count": 2656
-  },
-  {
-    "filename": "d3.v3.js",
-    "count": 1589
-  },
-  {
-    "filename": "d3.js",
-    "count": 302
-  },
-  {
     "filename": "d3.geo.projection.v0.min.js",
     "count": 279
-  },
-  {
-    "filename": "d3.v2.js",
-    "count": 276
-  },
-  {
-    "filename": "d3.v2.min.js",
-    "count": 146
   },
   {
     "filename": "d3.tip.v0.6.3.js",
@@ -72,24 +48,12 @@
     "count": 45
   },
   {
-    "filename": "d3-3.5.5.js",
-    "count": 40
-  },
-  {
     "filename": "d3.geo.tile.v0.min.js",
     "count": 28
   },
   {
-    "filename": "d3.v4.0.0-alpha.35.min.js",
-    "count": 27
-  },
-  {
     "filename": "d3-legend.min.js",
     "count": 25
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.4.min.js",
-    "count": 23
   },
   {
     "filename": "d3-queue.v2.min.js",
@@ -116,20 +80,12 @@
     "count": 15
   },
   {
-    "filename": "d3.v4.0.0-alpha.28.min.js",
-    "count": 14
-  },
-  {
     "filename": "d3.tip.min.js",
     "count": 13
   },
   {
     "filename": "d3.hexbin.v0.min.js",
     "count": 13
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.18.min.js",
-    "count": 12
   },
   {
     "filename": "d3-grid.js",
@@ -192,10 +148,6 @@
     "count": 8
   },
   {
-    "filename": "d3.v4.0.0-alpha.29.min.js",
-    "count": 8
-  },
-  {
     "filename": "d3.geo.zoom.js",
     "count": 8
   },
@@ -222,10 +174,6 @@
   {
     "filename": "d3.csv.js",
     "count": 7
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.33.min.js",
-    "count": 6
   },
   {
     "filename": "gexfd3.js",
@@ -257,10 +205,6 @@
   },
   {
     "filename": "d3.hexbin.js",
-    "count": 5
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.9.min.js",
     "count": 5
   },
   {
@@ -348,19 +292,11 @@
     "count": 3
   },
   {
-    "filename": "d3.v3.1.8.js",
-    "count": 3
-  },
-  {
     "filename": "d3.scatterplotwithlineplot.js",
     "count": 3
   },
   {
     "filename": "d3.hemicycle.js",
-    "count": 3
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.15.min.js",
     "count": 3
   },
   {
@@ -404,10 +340,6 @@
     "count": 2
   },
   {
-    "filename": "d3.v2.patched.js",
-    "count": 2
-  },
-  {
     "filename": "TileLayer.d3_topoJSON.js",
     "count": 2
   },
@@ -417,14 +349,6 @@
   },
   {
     "filename": "d3.geo.zoom.min.js",
-    "count": 2
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.35.js",
-    "count": 2
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.29.js",
     "count": 2
   },
   {
@@ -449,10 +373,6 @@
   },
   {
     "filename": "d3.promise.min.js",
-    "count": 2
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.22.min.js",
     "count": 2
   },
   {
@@ -488,10 +408,6 @@
     "count": 2
   },
   {
-    "filename": "d3.v4.0.0-alpha.24.min.js",
-    "count": 2
-  },
-  {
     "filename": "d3.selection.template.js",
     "count": 2
   },
@@ -517,10 +433,6 @@
   },
   {
     "filename": "d3-random.v0.2.min.js",
-    "count": 2
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.21.min.js",
     "count": 2
   },
   {
@@ -604,10 +516,6 @@
     "count": 1
   },
   {
-    "filename": "d3.min3.1.5.js",
-    "count": 1
-  },
-  {
     "filename": "d3.geo2circle.js",
     "count": 1
   },
@@ -680,10 +588,6 @@
     "count": 1
   },
   {
-    "filename": "d3.v3-modified.js",
-    "count": 1
-  },
-  {
     "filename": "d3_code_japanese_numbers.js",
     "count": 1
   },
@@ -736,10 +640,6 @@
     "count": 1
   },
   {
-    "filename": "d3.v3.2.1.js",
-    "count": 1
-  },
-  {
     "filename": "readme-d3_modded.js",
     "count": 1
   },
@@ -777,10 +677,6 @@
   },
   {
     "filename": "d3legend.js",
-    "count": 1
-  },
-  {
-    "filename": "d3-3.5.5.min.js",
     "count": 1
   },
   {
@@ -908,10 +804,6 @@
     "count": 1
   },
   {
-    "filename": "d3.v4.0.0-alpha.16.min.js",
-    "count": 1
-  },
-  {
     "filename": "d3-timeline.js",
     "count": 1
   },
@@ -968,10 +860,6 @@
     "count": 1
   },
   {
-    "filename": "d3-3.5.15.min.js",
-    "count": 1
-  },
-  {
     "filename": "d3.boxesplot.js",
     "count": 1
   },
@@ -1000,15 +888,7 @@
     "count": 1
   },
   {
-    "filename": "d3.v2.min_.js",
-    "count": 1
-  },
-  {
     "filename": "reusable.d3.charts.js",
-    "count": 1
-  },
-  {
-    "filename": "d3.v4.0.0-alpha.26.min.js",
     "count": 1
   },
   {
@@ -1104,15 +984,7 @@
     "count": 1
   },
   {
-    "filename": "d3.v4.0.0-alpha.28.js",
-    "count": 1
-  },
-  {
     "filename": "d3-time-format.v0.3.min.js",
-    "count": 1
-  },
-  {
-    "filename": "d3.v4.min.js",
     "count": 1
   },
   {
