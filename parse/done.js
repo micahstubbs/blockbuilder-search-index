@@ -21,6 +21,12 @@ const done = function(parentProps, error) {
   console.log(`skipped ${missing} missing files`)
   const scriptTags = Array.from(scriptTagsSet).sort()
 
+  // specify the output directory
+  const outputDir = `${__dirname}/../data/parsed-new-method`
+  // if the output directory does not already exist
+  // create it
+  if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir)
+
   //
   // write out the metadata we just parsed
   //
@@ -31,49 +37,49 @@ const done = function(parentProps, error) {
     {
       data: apiHash,
       message: 'd3 API functions',
-      filePath: '/../data/parsed/apis.json'
+      filePath: `${outputDir}/apis.json`
     },
     {
       data: colorHash,
       message: 'colors',
-      filePath: '/../data/parsed/colors.json'
+      filePath: `${outputDir}/colors.json`
     },
     {
       data: allBlocks,
       message: 'block metadata entries',
-      filePath: '/../data/parsed/blocks.json'
+      filePath: `${outputDir}/blocks.json`
     },
     {
       min: true,
       data: minBlocks,
       message: 'minified block metadata entries',
-      filePath: '/../data/parsed/blocks-min.json'
+      filePath: `${outputDir}/blocks-min.json`
     },
     {
       data: apiBlocks,
       message: 'single-block d3 API function lists',
-      filePath: '/../data/parsed/blocks-api.json'
+      filePath: `${outputDir}/blocks-api.json`
     },
     {
       data: colorBlocks,
       message: 'colors entries',
-      filePath: '/../data/parsed/blocks-colors.json'
+      filePath: `${outputDir}/blocks-colors.json`
     },
     {
       min: true,
       data: colorBlocksMin,
       message: 'minified colors entries',
-      filePath: '/../data/parsed/blocks-colors-min.json'
+      filePath: `${outputDir}/blocks-colors-min.json`
     },
     {
       data: fileBlocks,
       message: 'file metadata entries',
-      filePath: '/../data/parsed/files-blocks.json'
+      filePath: `${outputDir}/files-blocks.json`
     },
     {
       data: scriptTags,
       message: 'script tags',
-      filePath: '/../data/parsed/script-tags.json'
+      filePath: `${outputDir}/script-tags.json`
     }
   ]
   const maxMessageLength = Math.max(
@@ -112,13 +118,13 @@ const done = function(parentProps, error) {
   Object.keys(libHash).forEach(
     lib => (libcsv += lib + ',' + libHash[lib] + '\n')
   )
-  fs.writeFileSync(__dirname + '/../data/parsed/libs.csv', libcsv)
+  fs.writeFileSync(__dirname + `${outputDir}/libs.csv', libcsv)
 
   let modulescsv = 'module,count\n'
   Object.keys(moduleHash)
     .sort((a, b) => moduleHash[b] - moduleHash[a])
     .forEach(module => (modulescsv += module + ',' + moduleHash[module] + '\n'))
-  fs.writeFileSync(__dirname + '/../data/parsed/modules.csv', modulescsv)
+  fs.writeFileSync(__dirname + `${outputDir}/modules.csv', modulescsv)
 
   if (error) {
     console.log('error', error)
