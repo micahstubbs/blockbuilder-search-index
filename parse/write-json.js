@@ -4,13 +4,12 @@ const writeJson = function({ filePath, data, min, message }) {
   // pretty print with 2 spaces by default
   let space = 2
   let fullPath = `${filePath}`
-  const trimmedPath = filePath.replace('/../', '')
   if (min) space = null
   let writeMessage = ''
   if (Array.isArray(data)) {
-    writeMessage = `wrote ${data.length} ${message} to ${trimmedPath}`
+    writeMessage = `wrote ${data.length} ${message} to ${filePath}`
   } else {
-    writeMessage = `wrote ${message} to ${trimmedPath}`
+    writeMessage = `wrote ${message} to ${filePath}`
   }
 
   try {
