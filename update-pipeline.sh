@@ -94,14 +94,15 @@ coffee --nodejs --max-old-space-size=12000 elasticsearch.coffee
 # skipped 0 missing files
 
 coffee parse.coffee
-# 37320 '0df732160f5eff68c6c683ef3a18f76e'
-# 37321 'a6f6f4a4588b390ba866710e55c77c20'
+# 37507 '35cc78e983f14aee9dc2ac571e6121ea'
+# 37508 '4d3450c295f1342f63b6bef88230e855'
 # done
 # skipped 0 missing files
-# wrote 10445 API blocks
-# wrote 11522 Color blocks
-# wrote 149198 Files blocks
-# wrote 37321 total blocks
+# wrote 10446 API blocks
+# wrote 11523 Color blocks
+# wrote 150022 Files blocks
+# wrote 37508 total blocks
+
 
 cd data/parsed
 pwd
