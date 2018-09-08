@@ -25,7 +25,7 @@ const gistParser = function(parentProps, gist, gistCb) {
     apiBlocks,
     moduleHash,
     scriptTagsSet,
-    scriptTagFilenamesSet
+    scriptTagFilenamesHash
   } = parentProps
   //console.log "NOT RETURNING", gist.id, singleId
   const gistUser = gist.user || gist.owner ? gist.owner.login : ''
@@ -80,7 +80,7 @@ const gistParser = function(parentProps, gist, gistCb) {
             const scriptTags = parseScriptTags({
               code,
               scriptTagsSet,
-              scriptTagFilenamesSet
+              scriptTagFilenamesHash
             })
 
             // TODO copy glibHash -> libHash etc for each of these

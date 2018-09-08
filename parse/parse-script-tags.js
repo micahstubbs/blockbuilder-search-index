@@ -3,7 +3,7 @@ const parseFileNameFromScriptTag = require('./parse-filename-from-script-tag.js'
 const parseScriptTags = function({
   code,
   scriptTagsSet,
-  scriptTagFilenamesSet
+  scriptTagFilenamesHash
 }) {
   // anything with a // in it (signifiying url...)
   //re = new RegExp /<script.*?src=[\"\'](.*?\/\/.+?)[\"\'].*?>/g
@@ -17,7 +17,7 @@ const parseScriptTags = function({
     scriptTagsSet.add(scriptTagString)
     // as a side effect
     // parse the filename out from the script tag
-    parseFileNameFromScriptTag({ scriptTagString, scriptTagFilenamesSet })
+    parseFileNameFromScriptTag({ scriptTagString, scriptTagFilenamesHash })
     //
     // not sure if this is having it's desired effect
     // TODO investigate this

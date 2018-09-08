@@ -15,14 +15,21 @@ const done = function(parentProps, error) {
     libHash,
     moduleHash,
     scriptTagsSet,
-    scriptTagFilenamesSet
+    scriptTagFilenamesHash
   } = parentProps
   console.log('done') //, apiHash
   // console.log('moduleHash from done', moduleHash)
   console.log(`skipped ${missing} missing files`)
   const scriptTags = Array.from(scriptTagsSet).sort()
-  const scriptTagFilenames = Array.from(scriptTagFilenamesSet).sort()
-  const scriptTagFilenamesD3 = scriptTagFilenames.filter(f => f.includes('d3'))
+  const scriptTagFilenames = Object.keys(scriptTagFilenamesHash)
+    .map(key => ({
+      filename: key,
+      count: scriptTagFilenamesHash[key]
+    }))
+    .sort((a, b) => b.count - a.count)
+  const scriptTagFilenamesD3 = scriptTagFilenames.filter(f =>
+    f.filename.includes('d3')
+  )
 
   // specify the output directory
   const outputDir = `${__dirname}/../data/parsed-new-method`

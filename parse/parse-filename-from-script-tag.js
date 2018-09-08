@@ -1,6 +1,6 @@
 const parseFileNameFromScriptTag = function({
   scriptTagString,
-  scriptTagFilenamesSet
+  scriptTagFilenamesHash
 }) {
   // a pattern for filenames
   // positive lookbehind, requires nodejs >= v8.0.0
@@ -10,7 +10,10 @@ const parseFileNameFromScriptTag = function({
   if (matches !== null) {
     // filename is the last match
     const filename = matches[matches.length - 2]
-    scriptTagFilenamesSet.add(filename)
+    if (typeof scriptTagFilenamesHash[filename] === 'undefined') {
+      scriptTagFilenamesHash[filename] = 0
+    }
+    scriptTagFilenamesHash[filename] += 1
   }
 }
 
