@@ -33,204 +33,65 @@ coffee combine-users.coffee
 # if yes, run this command. if no, do nothing
 #  
 coffee gist-meta.coffee data/new.json '' 'new-users'
-# done with zischwartz, found 13 gists
-# x-ratelimit-remaining: 1793
-# x-ratelimit-remaining: 1792
-# done with zzhang115, found 21 gists
 #
-# done. number of new gists: 7911
-# combining 7911 with 29424 existing blocks
-# writing 37303 blocks to data/gist-meta.json
-# writing 7911 to data/new.json
+# not run this update, no new users found
 #
-# Elasticsearch DEBUG: 2018-08-26T00:18:45Z
-#   starting request { method: 'POST',
-#     path: '/bbindexer/scripts',
-#     body:
-#      { script: 'meta',
-#        numBlocks: 7911,
-#        filename: 'data/new.json',
-#        since: 1970-01-01T00:00:00.000Z,
-#        ranAt: 2018-08-26T00:18:45.212Z },
-#     query: {} }
-
-
-# Elasticsearch TRACE: 2018-08-26T00:18:45Z
-#   -> POST http://localhost:9200/bbindexer/scripts
-#   {
-#     "script": "meta",
-#     "numBlocks": 7911,
-#     "filename": "data/new.json",
-#     "since": "1970-01-01T00:00:00.000Z",
-#     "ranAt": "2018-08-26T00:18:45.212Z"
-#   }
-#   <- 201
-#   {
-#     "_index": "bbindexer",
-#     "_type": "scripts",
-#     "_id": "E6aYc2UBizCTN0xZ553R",
-#     "_version": 1,
-#     "result": "created",
-#     "_shards": {
-#       "total": 2,
-#       "successful": 1,
-#       "failed": 0
-#     },
-#     "_seq_no": 0,
-#     "_primary_term": 1
-#   }
-
-# Elasticsearch DEBUG: 2018-08-26T00:18:45Z
-#   Request complete
-
-# indexed
 
 #
 # fetch the metadata for all new gists
 # for all known users from the github API
 #
-coffee gist-meta.coffee data/latest-20180819-to-20180824.json $UPDATE_AFTER_TIMESTAMP
-# done with zwakhall, found 0 gists
-# x-ratelimit-remaining: 0
+coffee gist-meta.coffee data/latest-20180819-to-20180907.json $UPDATE_AFTER_TIMESTAMP
+# rate limit remaining 178
+# done with zzhang115, found 0 gists
+# rate limit remaining 177
 # done with zzolo, found 0 gists
-#
-# done. number of new gists: 57
-# combining 57 with 37303 existing blocks
-# writing 37321 blocks to data/gist-meta.json
-# writing 57 to data/latest-20180819-to-20180824.json
-#
-# Elasticsearch DEBUG: 2018-08-26T00:25:16Z
-#   starting request { method: 'POST',
-#     path: '/bbindexer/scripts',
-#     body:
-#      { script: 'meta',
-#        numBlocks: 57,
-#        filename: 'data/latest-20180819-to-20180824.json',
-#        since: '2018-08-19T00:00:00Z',
-#        ranAt: 2018-08-26T00:25:16.854Z },
-#     query: {} }
-
-
-# Elasticsearch TRACE: 2018-08-26T00:25:16Z
-#   -> POST http://localhost:9200/bbindexer/scripts
-#   {
-#     "script": "meta",
-#     "numBlocks": 57,
-#     "filename": "data/latest-20180819-to-20180824.json",
-#     "since": "2018-08-19T00:00:00Z",
-#     "ranAt": "2018-08-26T00:25:16.854Z"
-#   }
-#   <- 201
-#   {
-#     "_index": "bbindexer",
-#     "_type": "scripts",
-#     "_id": "FKaec2UBizCTN0xZ4Z1y",
-#     "_version": 1,
-#     "result": "created",
-#     "_shards": {
-#       "total": 2,
-#       "successful": 1,
-#       "failed": 0
-#     },
-#     "_seq_no": 0,
-#     "_primary_term": 1
-#   }
-
-# Elasticsearch DEBUG: 2018-08-26T00:25:16Z
-#   Request complete
-
-# indexed
+# done. number of new gists: 349
+# combining 349 with 37346 existing blocks
+# writing 37508 blocks to data/gist-meta.json
+# writing 349 to data/latest-20180819-to-20180907.json
 
 #
 # let's clone the gists we just found
 #
-coffee gist-cloner.coffee data/latest-20180819-to-20180824.json
+coffee gist-cloner.coffee data/latest-20180819-to-20180907.json
 # done writing files
-# Elasticsearch DEBUG: 2018-08-26T00:40:39Z
+# Elasticsearch DEBUG: 2018-09-08T19:06:13Z
 #   starting request { method: 'POST',
 #     path: '/bbindexer/scripts',
 #     body:
 #      { script: 'content',
 #        timeouts: [],
-#        filename: 'data/latest-20180819-to-20180824.json',
-#        ranAt: 2018-08-26T00:40:39.108Z },
+#        filename: 'data/latest-20180819-to-20180907.json',
+#        ranAt: 2018-09-08T19:06:13.084Z },
 #     query: {} }
-#
-#
-# Elasticsearch TRACE: 2018-08-26T00:40:39Z
-#   -> POST http://localhost:9200/bbindexer/scripts
+
+
+# Elasticsearch TRACE: 2018-09-08T19:06:13Z
+#   -> POST https://localhost:9200/bbindexer/scripts
 #   {
 #     "script": "content",
 #     "timeouts": [],
-#     "filename": "data/latest-20180819-to-20180824.json",
-#     "ranAt": "2018-08-26T00:40:39.108Z"
+#     "filename": "data/latest-20180819-to-20180907.json",
+#     "ranAt": "2018-09-08T19:06:13.084Z"
 #   }
-#   <- 201
-#   {
-#     "_index": "bbindexer",
-#     "_type": "scripts",
-#     "_id": "Faasc2UBizCTN0xZ853P",
-#     "_version": 1,
-#     "result": "created",
-#     "_shards": {
-#       "total": 2,
-#       "successful": 1,
-#       "failed": 0
-#     },
-#     "_seq_no": 1,
-#     "_primary_term": 1
-#   }
-#
-# Elasticsearch DEBUG: 2018-08-26T00:40:39Z
-#   Request complete
-#
-# indexed
+#   <- 0
+
 
 coffee gist-cloner.coffee data/new.json 
-# 5cd3c864f7249642998fd03fb8271890 zzhang115 0 Cloning into '5cd3c864f7249642998fd03fb8271890'...
 #
-# 6c8ccda822c620731d0225599b7e3e12 zzhang115 0 Cloning into '6c8ccda822c620731d0225599b7e3e12'...
+# no new users found, not run this time
 #
-# done writing files
-# Elasticsearch DEBUG: 2018-08-26T08:26:33Z
-#   starting request { method: 'POST',
-#     path: '/bbindexer/scripts',
-#     body:
-#      { script: 'content',
-#        timeouts: [],
-#        filename: 'data/new.json',
-#        ranAt: 2018-08-26T08:26:33.281Z },
-#     query: {} }
-#
-#
-# Elasticsearch TRACE: 2018-08-26T08:26:33Z
-#   -> POST http://localhost:9200/bbindexer/scripts
-#   {
-#     "script": "content",
-#     "timeouts": [],
-#     "filename": "data/new.json",
-#     "ranAt": "2018-08-26T08:26:33.281Z"
-#   }
-#   <- 201
-#   {
-#     "_index": "bbindexer",
-#     "_type": "scripts",
-#     "_id": "FqZXdWUBizCTN0xZf53X",
-#     "_version": 1,
-#     "result": "created",
-#     "_shards": {
-#       "total": 2,
-#       "successful": 1,
-#       "failed": 0
-#     },
-#     "_seq_no": 0,
-#     "_primary_term": 1
-#   }
-#
-# Elasticsearch DEBUG: 2018-08-26T08:26:33Z
-#   Request complete
-#
-# indexed
+
+coffee --nodejs --max-old-space-size=12000 elasticsearch.coffee
+# indexed 37504 604b907cdb944368a3d635d4f6663c6d
+# indexed 37503 db1ac0efe50844239f20aa3762dd1729
+# indexed 37507 35cc78e983f14aee9dc2ac571e6121ea
+# indexed 37506 c92fa45bace8fc78be67c76d90e20979
+# indexed 37501 44d27aa57120d799cc3f214976f716a2
+# indexed 37502 f850022a5309d979ac8e99fa08b6d4aa
+# done
+# skipped 0 missing files
 
 coffee parse.coffee
 # 37320 '0df732160f5eff68c6c683ef3a18f76e'
