@@ -118,13 +118,13 @@ const done = function(parentProps, error) {
   Object.keys(libHash).forEach(
     lib => (libcsv += lib + ',' + libHash[lib] + '\n')
   )
-  fs.writeFileSync(__dirname + `${outputDir}/libs.csv', libcsv)
+  fs.writeFileSync(__dirname + `${outputDir}/libs.csv`, libcsv)
 
   let modulescsv = 'module,count\n'
   Object.keys(moduleHash)
     .sort((a, b) => moduleHash[b] - moduleHash[a])
     .forEach(module => (modulescsv += module + ',' + moduleHash[module] + '\n'))
-  fs.writeFileSync(__dirname + `${outputDir}/modules.csv', modulescsv)
+  fs.writeFileSync(__dirname + `${outputDir}/modules.csv`, modulescsv)
 
   if (error) {
     console.log('error', error)
