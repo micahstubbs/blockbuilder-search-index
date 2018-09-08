@@ -104,6 +104,26 @@ coffee parse.coffee
 # wrote 37508 total blocks
 
 
+node parse
+#
+# test out the new parsing script
+#
+# gist 35cc78e983f14aee9dc2ac571e6121ea wboykinm
+# gist 4d3450c295f1342f63b6bef88230e855 zmeers
+# done
+# skipped 0 missing files
+# wrote d3 API functions                         to data/parsed-new-method/apis.json
+# wrote colors                                   to data/parsed-new-method/colors.json
+# wrote 37508 block metadata entries             to data/parsed-new-method/blocks.json
+# wrote 37508 minified block metadata entries    to data/parsed-new-method/blocks-min.json
+# wrote 10446 single-block d3 API function lists to data/parsed-new-method/blocks-api.json
+# wrote 11523 colors entries                     to data/parsed-new-method/blocks-colors.json
+# wrote 11523 minified colors entries            to data/parsed-new-method/blocks-colors-min.json
+# wrote 0 file metadata entries                  to data/parsed-new-method/files-blocks.json
+# wrote 3844 script tags                         to data/parsed-new-method/script-tags.json
+
+
+
 cd data/parsed
 pwd
 # /Users/m/workspace/blockbuilder-search-index/data/parsed
