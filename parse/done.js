@@ -62,15 +62,15 @@ const done = function(parentProps, error) {
   stats.blockColorsEntriesMin = colorBlocksMin.length
   stats.blockFilesEntries = fileBlocks.length
   stats.scriptTagsUnique = scriptTags.length
-  stats.scriptTagsTotal = scriptTagCounts.map(d => d.count).reduce(sum)
+  stats.scriptTagsTotal = scriptTagCounts.map(d => d.count).reduce(sum, 0)
   stats.scriptTagFilenamesUnique = scriptTagFilenames.length
   stats.scriptTagFilenamesTotal = scriptTagFilenameCounts
     .map(d => d.count)
-    .reduce(sum)
+    .reduce(sum, 0)
   stats.scriptTagFilenamesD3Unique = scriptTagFilenamesD3.length
   stats.scriptTagFilenamesD3Total = scriptTagFilenameCountsD3
     .map(d => d.count)
-    .reduce(sum)
+    .reduce(sum, 0)
 
   // specify the output directory
   const parsedDir = `${__dirname}/../data/parsed-new-method`
