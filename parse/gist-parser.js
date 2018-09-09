@@ -69,7 +69,7 @@ const gistParser = function(parentProps, gist, gistCb) {
       ) {
         const file = folder + '/' + fileName
         return fs.readFile(file, function(err, data) {
-          console.log('file', file)
+          // console.log('file', file)
           let numColors
           if (!data) {
             console.log('no data, early return')
@@ -77,7 +77,7 @@ const gistParser = function(parentProps, gist, gistCb) {
           }
           const contents = data.toString()
           // console.log('contents from gistParser readFile', contents)
-          console.log('fileName from gist-parser', fileName)
+          // console.log('fileName from gist-parser', fileName)
           if (fileName.toLowerCase() === 'index.html') {
             console.log('parsing index.html')
             const code = contents
