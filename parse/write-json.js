@@ -9,7 +9,7 @@ const writeJson = function({ filePath, data, min, message }) {
   if (Array.isArray(data)) {
     writeMessage = `wrote ${data.length} ${message} to ${filePath}`
   } else if (typeof data === 'object') {
-    writeMessage = `wrote ${Object.keys(data.length)} ${message} to ${filePath}`
+    writeMessage = `wrote ${Object.keys(data).length} ${message} to ${filePath}`
   } else {
     writeMessage = `wrote ${message} to ${filePath}`
   }
