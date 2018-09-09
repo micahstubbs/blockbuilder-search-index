@@ -2,7 +2,7 @@ const parseFileNameFromScriptTag = require('./parse-filename-from-script-tag.js'
 
 const parseScriptTags = function({
   code,
-  scriptTagsSet,
+  scriptTagHash,
   scriptTagFilenamesHash
 }) {
   // anything with a // in it (signifiying url...)
@@ -14,7 +14,10 @@ const parseScriptTags = function({
   while (match !== null) {
     const scriptTagString = match[1]
     matches.push(scriptTagString)
-    scriptTagsSet.add(scriptTagString)
+    if (typeof scriptTagHash[scriptTagString] === 'undefined') {
+      scriptTagHash[scriptTagString] = 0
+    }
+    scriptTagHash[scriptTagString] += 1
     // as a side effect
     // parse the filename out from the script tag
     parseFileNameFromScriptTag({ scriptTagString, scriptTagFilenamesHash })

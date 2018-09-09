@@ -5,10 +5,10 @@ const parseLibs = function({
   gist,
   glibHash,
   scriptTags,
-  scriptTagsSet
+  scriptTagHash
 }) {
   // only parse scriptTags if passed in scriptTags prop is falsy
-  const scripts = scriptTags || parseScriptTags({ code, scriptTagsSet })
+  const scripts = scriptTags || parseScriptTags({ code, scriptTagHash })
 
   scripts.forEach(function(script) {})
   //console.log script

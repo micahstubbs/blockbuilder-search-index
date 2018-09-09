@@ -24,7 +24,7 @@ const gistParser = function(parentProps, gist, gistCb) {
     colorBlocksMin,
     apiBlocks,
     moduleHash,
-    scriptTagsSet,
+    scriptTagHash,
     scriptTagFilenamesHash
   } = parentProps
   //console.log "NOT RETURNING", gist.id, singleId
@@ -79,7 +79,7 @@ const gistParser = function(parentProps, gist, gistCb) {
             const code = contents
             const scriptTags = parseScriptTags({
               code,
-              scriptTagsSet,
+              scriptTagHash,
               scriptTagFilenamesHash
             })
 
@@ -89,15 +89,15 @@ const gistParser = function(parentProps, gist, gistCb) {
               gist,
               glibHash,
               scriptTags,
-              scriptTagsSet
+              scriptTagHash
             })
-            const version = parseD3Version({ code, scriptTags, scriptTagsSet })
+            const version = parseD3Version({ code, scriptTags, scriptTagHash })
             const modules = parseD3Modules({
               code,
               moduleHash,
               gistModuleHash,
               scriptTags,
-              scriptTagsSet
+              scriptTagHash
             })
             // console.log('fileName is index.html')
             // console.log('numLibs', numLibs)
