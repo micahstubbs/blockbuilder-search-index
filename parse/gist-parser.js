@@ -36,7 +36,9 @@ const gistParser = function(parentProps, gist, gistCb) {
   const glibHash = {}
   const gistModuleHash = {}
   const gcolorHash = {}
-  const folder = __dirname + '/' + '../data/gists-files/' + gist.id
+  const folder = `${__dirname}/../data/gists-clones/${gist.owner.login}/${
+    gist.id
+  }`
   fs.mkdir(folder, function() {})
 
   // we make a simplified data object for each file
@@ -66,16 +68,18 @@ const gistParser = function(parentProps, gist, gistCb) {
         ].includes(ext)
       ) {
         const file = folder + '/' + fileName
-        // console.log('file', file)
         return fs.readFile(file, function(err, data) {
+          console.log('file', file)
           let numColors
           if (!data) {
-            // console.log('no data, early return')
+            console.log('no data, early return')
             return fileCb()
           }
           const contents = data.toString()
           // console.log('contents from gistParser readFile', contents)
-          if (fileName === 'index.html') {
+          console.log('fileName from gist-parser', fileName)
+          if (fileName.toLowerCase() === 'index.html') {
+            console.log('parsing index.html')
             const code = contents
             const scriptTags = parseScriptTags({
               code,

@@ -1,16 +1,16 @@
 {
-  "parseTime": "2018-09-09T05:35:47.167Z",
+  "parseTime": "2018-09-09T06:51:14.623Z",
   "apis": 0,
   "colors": 0,
-  "blockMetadataEntries": 37508,
-  "blockMetadataEntriesMin": 37508,
-  "blockColorsEntries": 11523,
-  "blockColorsEntriesMin": 11523,
+  "blockMetadataEntries": 20,
+  "blockMetadataEntriesMin": 20,
+  "blockColorsEntries": 17,
+  "blockColorsEntriesMin": 17,
   "blockFilesEntries": 0,
-  "scriptTagsUnique": 3844,
-  "scriptTagsTotal": 23494,
-  "scriptTagFilenamesUnique": 2350,
-  "scriptTagFilenamesTotal": 23494,
-  "scriptTagFilenamesD3Unique": 280,
-  "scriptTagFilenamesD3Total": 12004
+  "scriptTagsUnique": 9,
+  "scriptTagsTotal": 42,
+  "scriptTagFilenamesUnique": 1,
+  "scriptTagFilenamesTotal": 42,
+  "scriptTagFilenamesD3Unique": 0,
+  "scriptTagFilenamesD3Total": 0
 }

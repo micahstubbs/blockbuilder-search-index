@@ -21,6 +21,10 @@ const done = function(parentProps, error) {
   // console.log('moduleHash from done', moduleHash)
   console.log(`skipped ${missing} missing files`)
 
+  // specify the output directory
+  const parsedDir = `${__dirname}/../data/parsed-new-method`
+  const metadataDir = `${__dirname}/../data/metadata`
+
   //
   // prepare different types of scriptTag data for writing
   //
@@ -42,11 +46,16 @@ const done = function(parentProps, error) {
     }))
     .sort((a, b) => b.count - a.count)
 
-  const scriptTagFilenamesD3 = scriptTagFilenames.filter(f => f.includes('d3'))
-
-  const scriptTagFilenameCountsD3 = scriptTagFilenameCounts.filter(f =>
-    f.filename.includes('d3')
+  const d3LibraryFilenames = JSON.parse(
+    fs.readFileSync(`${metadataDir}/d3-library-filenames.json`)
   )
+  const scriptTagFilenamesD3 = scriptTagFilenames
+    .filter(f => f.includes('d3'))
+    .filter(f => !d3LibraryFilenames.includes(f))
+
+  const scriptTagFilenameCountsD3 = scriptTagFilenameCounts
+    .filter(f => f.filename.includes('d3'))
+    .filter(f => !d3LibraryFilenames.includes(f.filename))
 
   //
   // calculate some stats
@@ -72,9 +81,6 @@ const done = function(parentProps, error) {
     .map(d => d.count)
     .reduce(sum, 0)
 
-  // specify the output directory
-  const parsedDir = `${__dirname}/../data/parsed-new-method`
-  const metadataDir = `${__dirname}/../data/metadata`
   // if the parsed output directory does not already exist
   // create it
   if (!fs.existsSync(parsedDir)) fs.mkdirSync(parsedDir)

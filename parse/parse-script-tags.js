@@ -9,11 +9,12 @@ const parseScriptTags = function({
   //re = new RegExp /<script.*?src=[\"\'](.*?\/\/.+?)[\"\'].*?>/g
   // anything with a .js in it
   const re = new RegExp(/<script.*?src=[\"\'](.*?\.js.*?)[\"\'].*?>/g)
-  const matches = []
-  let match = re.exec(code)
-  while (match !== null) {
-    const scriptTagString = match[1]
-    matches.push(scriptTagString)
+  const matches = code.match(re)
+
+  console.log('matches', matches)
+
+  matches.forEach(match => {
+    const scriptTagString = match
     if (typeof scriptTagHash[scriptTagString] === 'undefined') {
       scriptTagHash[scriptTagString] = 0
     }
@@ -22,11 +23,8 @@ const parseScriptTags = function({
     // parse the filename out from the script tag
     parseFileNameFromScriptTag({ scriptTagString, scriptTagFilenamesHash })
     //
-    // not sure if this is having it's desired effect
-    // TODO investigate this
-    //
-    match = re.exec(code)
-  }
+  })
+
   return matches
 }
 
