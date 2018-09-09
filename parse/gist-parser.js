@@ -79,7 +79,7 @@ const gistParser = function(parentProps, gist, gistCb) {
           // console.log('contents from gistParser readFile', contents)
           // console.log('fileName from gist-parser', fileName)
           if (fileName.toLowerCase() === 'index.html') {
-            console.log('parsing index.html')
+            // console.log('parsing index.html')
             const code = contents
             const scriptTags = parseScriptTags({
               code,
