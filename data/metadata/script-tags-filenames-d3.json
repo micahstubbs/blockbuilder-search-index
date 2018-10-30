@@ -1,4 +1,4 @@
-[                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+[                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   "490c1d3b8955f8681f24.js",
   "L.TileLayer.d3_JSON_mapsense.js",
   "TileLayer.d3_geoJSON.js",
@@ -116,7 +116,6 @@
   "d3-inertia.min.js",
   "d3-interpolate-path.js",
   "d3-interpolate-path.min.js",
-  "d3-interpolate.min.js",
   "d3-interpolate.v0.4.min.js",
   "d3-interpolate.v0.5.min.js",
   "d3-interpolate.v0.7.min.js",
@@ -142,6 +141,7 @@
   "d3-nelson-rules.min.js",
   "d3-octree.min.js",
   "d3-pan-zoom-extent.js",
+  "d3-parliament-min.js",
   "d3-path-arrows.js",
   "d3-path.arrows.js",
   "d3-path.js",
@@ -245,6 +245,7 @@
   "d3-unconf-badge.js",
   "d3-venn.js",
   "d3-viz.js",
+  "d3-voronoi-map-fixed-x.js",
   "d3-voronoi-map.js",
   "d3-voronoi-scatterplot.js",
   "d3-voronoi-treemap.js",

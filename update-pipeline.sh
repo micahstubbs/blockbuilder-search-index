@@ -12,7 +12,7 @@
 
 
 BLOCKBUILDER_SEARCH_INDEX_HOME="/Users/m/workspace/blockbuilder-search-index"
-UPDATE_AFTER_TIMESTAMP="2018-08-23T00:00:00Z"
+UPDATE_AFTER_TIMESTAMP="2018-09-07T00:00:00Z"
 
 cd $BLOCKBUILDER_SEARCH_INDEX_HOME
 
@@ -32,96 +32,140 @@ coffee combine-users.coffee
 # the file data/new.json exists
 # if yes, run this command. if no, do nothing
 #  
+#
+# if no new users found, do not run this update
+#
 coffee gist-meta.coffee data/new.json '' 'new-users'
-#
-# not run this update, no new users found
-#
+
 
 #
 # fetch the metadata for all new gists
 # for all known users from the github API
 #
-coffee gist-meta.coffee data/latest-20180819-to-20180907.json $UPDATE_AFTER_TIMESTAMP
-# rate limit remaining 178
+# TODO: automate dates in filename here
+# something like $UPDATE_AFTER_TIMESTAMP to $TODAY-1
+coffee gist-meta.coffee data/latest-20180907-to-20181029.json $UPDATE_AFTER_TIMESTAMP
 # done with zzhang115, found 0 gists
-# rate limit remaining 177
+# rate limit remaining 947
 # done with zzolo, found 0 gists
-# done. number of new gists: 349
-# combining 349 with 37346 existing blocks
-# writing 37508 blocks to data/gist-meta.json
-# writing 349 to data/latest-20180819-to-20180907.json
+# rate limit remaining 946
+# done with zukethenuke, found 0 gists
+# done. number of new gists: 1081
+# combining 1081 with 37508 existing blocks
+# writing 38175 blocks to data/gist-meta.json
+# writing 1081 to data/latest-20180907-to-20181029.json
 
 #
 # let's clone the gists we just found
 #
-coffee gist-cloner.coffee data/latest-20180819-to-20180907.json
+coffee gist-cloner.coffee data/latest-20180907-to-20181029.json
+# Already up-to-date.
+# 6a31f4ef9e778d94c204 zross 0 From https://gist.github.com/6a31f4ef9e778d94c204
+#  * branch            master     -> FETCH_HEAD
+
+# already got 9893056
+# From https://gist.github.com/9893056
+#  * branch            master     -> FETCH_HEAD
+# Already up-to-date.
+# 9893056 zross 0 From https://gist.github.com/9893056
+#  * branch            master     -> FETCH_HEAD
+
 # done writing files
-# Elasticsearch DEBUG: 2018-09-08T19:06:13Z
+# Elasticsearch DEBUG: 2018-10-30T22:11:54Z
 #   starting request { method: 'POST',
 #     path: '/bbindexer/scripts',
 #     body:
 #      { script: 'content',
 #        timeouts: [],
-#        filename: 'data/latest-20180819-to-20180907.json',
-#        ranAt: 2018-09-08T19:06:13.084Z },
+#        filename: 'data/latest-20180907-to-20181029.json',
+#        ranAt: 2018-10-30T22:11:54.045Z },
 #     query: {} }
 
 
-# Elasticsearch TRACE: 2018-09-08T19:06:13Z
-#   -> POST https://localhost:9200/bbindexer/scripts
+# Elasticsearch TRACE: 2018-10-30T22:11:54Z
+#   -> POST http://localhost:9200/bbindexer/scripts
 #   {
 #     "script": "content",
 #     "timeouts": [],
-#     "filename": "data/latest-20180819-to-20180907.json",
-#     "ranAt": "2018-09-08T19:06:13.084Z"
+#     "filename": "data/latest-20180907-to-20181029.json",
+#     "ranAt": "2018-10-30T22:11:54.045Z"
 #   }
-#   <- 0
+#   <- 201
+#   {
+#     "_index": "bbindexer",
+#     "_type": "scripts",
+#     "_id": "PB4Ix2YBt3e9zqvafJ_n",
+#     "_version": 1,
+#     "result": "created",
+#     "_shards": {
+#       "total": 2,
+#       "successful": 1,
+#       "failed": 0
+#     },
+#     "_seq_no": 0,
+#     "_primary_term": 1
+#   }
 
+# Elasticsearch DEBUG: 2018-10-30T22:11:54Z
+#   Request complete
 
+# indexed
+
+#
+# if no new users found, do not run this time
+#
 coffee gist-cloner.coffee data/new.json 
-#
-# no new users found, not run this time
-#
 
+#
+# index all the blocks in elasticsearch
+#
+# TODO: figure out if there is some argument
+# to only index the new blocks that we just found
+#
 coffee --nodejs --max-old-space-size=12000 elasticsearch.coffee
-# indexed 37504 604b907cdb944368a3d635d4f6663c6d
-# indexed 37503 db1ac0efe50844239f20aa3762dd1729
-# indexed 37507 35cc78e983f14aee9dc2ac571e6121ea
-# indexed 37506 c92fa45bace8fc78be67c76d90e20979
-# indexed 37501 44d27aa57120d799cc3f214976f716a2
-# indexed 37502 f850022a5309d979ac8e99fa08b6d4aa
+# indexed 38170 d041815cfc669fc647f0271bbd3ff307
+# indexed 38171 9e9cfd4ccea3a93038920f2d470e95f1
+# indexed 38172 27167d4ebd58d33bc4d8c4dc196fbd84
+# indexed 38173 05932b418560fd6530a008d230d1df28
+# indexed 38174 c13aeeb98127ef1c04fac1ee619757e6
+# indexed 38175 b71d7ff63199f268525f87a3d602cab6
 # done
 # skipped 0 missing files
 
 coffee parse.coffee
-# 37507 '35cc78e983f14aee9dc2ac571e6121ea'
-# 37508 '4d3450c295f1342f63b6bef88230e855'
+# 38174 'c13aeeb98127ef1c04fac1ee619757e6'
+# 38175 'b71d7ff63199f268525f87a3d602cab6'
 # done
 # skipped 0 missing files
-# wrote 10446 API blocks
-# wrote 11523 Color blocks
-# wrote 150022 Files blocks
-# wrote 37508 total blocks
+# wrote 32624 API blocks
+# wrote 33516 Color blocks
+# wrote 153136 Files blocks
+# wrote 38175 total blocks
 
 
 node parse
 #
 # test out the new parsing script
 #
-# gist 35cc78e983f14aee9dc2ac571e6121ea wboykinm
-# gist 4d3450c295f1342f63b6bef88230e855 zmeers
+# gist c13aeeb98127ef1c04fac1ee619757e6 y3l2n
+# gist b71d7ff63199f268525f87a3d602cab6 y3l2n
 # done
 # skipped 0 missing files
-# wrote d3 API functions                         to data/parsed-new-method/apis.json
-# wrote colors                                   to data/parsed-new-method/colors.json
-# wrote 37508 block metadata entries             to data/parsed-new-method/blocks.json
-# wrote 37508 minified block metadata entries    to data/parsed-new-method/blocks-min.json
-# wrote 10446 single-block d3 API function lists to data/parsed-new-method/blocks-api.json
-# wrote 11523 colors entries                     to data/parsed-new-method/blocks-colors.json
-# wrote 11523 minified colors entries            to data/parsed-new-method/blocks-colors-min.json
-# wrote 0 file metadata entries                  to data/parsed-new-method/files-blocks.json
-# wrote 3844 script tags                         to data/parsed-new-method/script-tags.json
-
+# wrote 0 d3 API functions                                                     to blockbuilder-search-index/data/parsed-new-method/apis.json
+# wrote 0 colors                                                               to blockbuilder-search-index/data/parsed-new-method/colors.json
+# wrote 38175 block metadata entries                                           to blockbuilder-search-index/data/parsed-new-method/blocks.json
+# wrote 38175 minified block metadata entries                                  to blockbuilder-search-index/data/parsed-new-method/blocks-min.json
+# wrote 32624 single-block d3 API function lists                               to blockbuilder-search-index/data/parsed-new-method/blocks-api.json
+# wrote 33516 colors entries                                                   to blockbuilder-search-index/data/parsed-new-method/blocks-colors.json
+# wrote 33516 minified colors entries                                          to blockbuilder-search-index/data/parsed-new-method/blocks-colors-min.json
+# wrote 0 file metadata entries                                                to blockbuilder-search-index/data/parsed-new-method/files-blocks.json
+# wrote 7373 script tags                                                       to blockbuilder-search-index/data/metadata/script-tags.json
+# wrote 7373 script tags and counts                                            to blockbuilder-search-index/data/metadata/script-tag-counts.json
+# wrote 4254 filenames from script tags                                        to blockbuilder-search-index/data/metadata/script-tags-filenames.json
+# wrote 4254 filenames and counts from script tags                             to blockbuilder-search-index/data/metadata/script-tags-filename-counts.json
+# wrote 505 filenames from script tags that contain the string d3              to blockbuilder-search-index/data/metadata/script-tags-filenames-d3.json
+# wrote 505 filenames and counts from script tags that contain the string d3   to blockbuilder-search-index/data/metadata/script-tags-filename-counts-d3.json
+# wrote 14 gist metadata stats from this parsing run                           to blockbuilder-search-index/data/metadata/stats.json
 
 
 cd data/parsed
@@ -132,19 +176,21 @@ pwd
 # tada, we have some fresh blocks metadata files
 #
 ls -lAFh
-# total 286816
-# -rw-r--r--@ 1 m  staff   6.0K Mar 16 18:10 .DS_Store
-# -rw-r--r--  1 m  staff     2B Aug 21 06:29 apis.json
-# -rw-r--r--  1 m  staff   3.2M Aug 21 06:29 blocks-api.json
-# -rw-r--r--  1 m  staff   2.2M Aug 21 06:29 blocks-colors-min.json
-# -rw-r--r--  1 m  staff   4.2M Aug 21 06:29 blocks-colors.json
-# -rw-r--r--  1 m  staff   5.9M Aug 21 06:29 blocks-min.json
-# -rw-r--r--  1 m  staff    76M Aug 21 06:29 blocks.json
-# -rw-r--r--  1 m  staff     2B Aug 21 06:29 colors.json
-# -rw-r--r--  1 m  staff    45M Aug 21 06:29 files-blocks.json
-# -rw-r--r--  1 m  staff    10B Aug 21 06:29 libs.csv
-# -rw-r--r--  1 m  staff    13B Aug 21 06:29 modules.csv
+# total 416696
+# -rw-r--r--@ 1 m  staff   6.0K Mar 16  2018 .DS_Store
+# -rw-r--r--  1 m  staff    26K Oct 30 15:26 apis.json
+# -rw-r--r--  1 m  staff    10M Oct 30 15:26 blocks-api.json
+# -rw-r--r--  1 m  staff   6.1M Oct 30 15:26 blocks-colors-min.json
+# -rw-r--r--  1 m  staff    12M Oct 30 15:26 blocks-colors.json
+# -rw-r--r--  1 m  staff   7.5M Oct 30 15:26 blocks-min.json
+# -rw-r--r--  1 m  staff   105M Oct 30 15:26 blocks.json
+# -rw-r--r--  1 m  staff   274K Oct 30 15:26 colors.json
+# -rw-r--r--  1 m  staff    14K Aug 25 23:33 d3-api-functions.json
+# -rw-r--r--  1 m  staff    59M Oct 30 15:26 files-blocks.json
+# -rw-r--r--  1 m  staff   313K Oct 30 15:26 libs.csv
+# -rw-r--r--  1 m  staff   1.2K Oct 30 15:26 modules.csv
 # -rw-r--r--  1 m  staff   3.6M Aug 14  2017 readme-blocks-graph.json
+# -rw-r--r--  1 m  staff   173K Aug 26 22:57 script-tags.json
 
 #
 # now let's call another shell script to generate the 
